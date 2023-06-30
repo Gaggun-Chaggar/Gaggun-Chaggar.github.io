@@ -58,16 +58,4 @@ a.tab:focus-visible {
 
 .section {
   margin-bottom: calc(4 * var(--grid-px));
-  position: relative;
-}
-
-.section:before {
-  content: "";
-  width: 2px;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  background-color: var(--colour-primary-dark);
-  border-radius: 1px;
 }
