@@ -3,10 +3,10 @@
 
   color: var(--colour-text);
   --text-margin: 2px;
+}
 
-  * {
-    font-size: 14px;
-  }
+* {
+  font-size: 14px;
 }
 
 h1,
@@ -50,6 +50,12 @@ p {
   margin-bottom: calc(var(--text-margin) * 2);
 }
 
+figcaption {
+  font-weight: 300;
+  font-size: 12px;
+  font-style: italic;
+}
+
 @media (min-width: 768px) {
   * {
     font-size: 16px;
@@ -78,6 +84,10 @@ p {
   p {
     font-size: 16px;
     margin-bottom: var(--text-margin);
+  }
+
+  figcaption {
+    font-size: 14px;
   }
 }
 

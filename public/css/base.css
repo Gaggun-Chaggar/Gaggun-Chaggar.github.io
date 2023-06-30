@@ -55,6 +55,7 @@ body {
   position: fixed;
   z-index: 1;
   background-color: var(--colour-primary);
+  border-bottom: 2px solid var(--colour-primary-dark);
 }
 
 main {
@@ -63,10 +64,6 @@ main {
 }
 
 @media (min-width: 768px) {
-  .header {
-    border-bottom: 2px solid var(--colour-primary-dark);
-  }
-
   main {
     padding-top: calc(183px + 2 * var(--grid-px));
   }
