@@ -6,13 +6,21 @@ import mustache from "mustache";
 import path from "path";
 
 const mdIt = new markdownIt();
-const blogFileNames = await glob("blog/**/*.md");
+
+const uft8enc = { encoding: "utf-8" };
 const blogPostTemplate = await fs.readFile(
   "./compiler/template/blog-post.html",
   {
     encoding: "utf-8",
   }
 );
+const blogListTemplate = await fs.readFile(
+  "./compiler/template/blog.html",
+  uft8enc
+);
+
+const blogFileNames = await glob("blog/**/*.md");
+const blogPosts = [];
 
 /**
  * @param {string} fileName
@@ -34,31 +42,92 @@ const writeFile = async (fileName, content) => {
     await fs.mkdir(pathAsString);
   }
 
-  fs.writeFile(fileName, content, { encoding: "utf-8" });
+  await fs.writeFile(fileName, content, uft8enc);
 };
 
+/**
+ *
+ * @param {string} fileName
+ */
 const processFile = async (fileName) => {
   const newFileName = path.join(
     "public/posts",
     fileName.replace("blog/", "").replace(".md", ".html")
   );
-
-  const contentString = await fs.readFile(fileName, { encoding: "utf-8" });
-
+  const contentString = await fs.readFile(fileName, uft8enc);
   const data = frontmatter(contentString);
-
   const html = mdIt.render(data.body);
 
-  const blogPost = mustache.render(blogPostTemplate, {
+  const attributes = {
     title: data.attributes.title,
     subtitle: data.attributes.subtitle,
     date: Intl.DateTimeFormat("en-DB", {}).format(
       new Date(data.attributes.date)
     ),
+  };
+
+  const blogPost = mustache.render(blogPostTemplate, {
+    ...attributes,
     article: html,
   });
 
-  writeFile(newFileName, blogPost);
+  await writeFile(newFileName, blogPost);
+
+  blogPosts.push({
+    ...attributes,
+    link: newFileName.replace("public", ""),
+  });
 };
 
-blogFileNames.forEach(processFile);
+for (const fileName of blogFileNames) {
+  await processFile(fileName);
+}
+
+/**
+ *
+ * @param {string} link
+ */
+const getCategory = (link) => {
+  if (!link) {
+    return "";
+  }
+  const path = link.split("/");
+  path.pop();
+  path.shift();
+  path.shift();
+  return path.join(" / ");
+};
+
+/**
+ *
+ * @param {{ title: string; subtitle: string; date: string }[]} blogPosts
+ */
+const createBlogList = (blogPosts) => {
+  const posts = `<ul class="blog-posts">
+    ${blogPosts
+      .map(
+        (post) => `
+        <li class="blog-post">
+        <a href="${post.link}">
+          <div>
+            ${
+              getCategory(post.link)
+                ? `<span class="category">${getCategory(post.link)}</span>`
+                : ""
+            }
+            <h2 class="title">${post.title}</h2>
+          </div>
+          <span class="date">${post.date}</span>
+          </a>
+        </li>
+      `
+      )
+      .join("")}
+  </ul>`;
+
+  const html = mustache.render(blogListTemplate, { posts });
+
+  fs.writeFile("public/blog.html", html, uft8enc);
+};
+
+createBlogList(blogPosts);

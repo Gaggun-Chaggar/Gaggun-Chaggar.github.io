@@ -87,6 +87,7 @@ a:visited {
   font-family: "Noto Sans";
   cursor: pointer;
   transition: color var(--transition);
+  color: var(--colour-secondary);
 }
 
 a:active,

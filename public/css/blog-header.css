@@ -1,0 +1,19 @@
+header.blog.header {
+  position: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+header.blog {
+  text-align: start;
+}
+
+header.blog .home {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+main.blog.content {
+  padding-top: calc(2 * var(--grid-px));
+}

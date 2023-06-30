@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <title>{{ title }}</title>
+    <title>Gaggun Chaggar - Blog</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,7 @@
     />
 
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/blog-header.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
   </head>
 
   <body class="bg-primary">
@@ -34,14 +34,10 @@
       <div
         class="flex flex-row flex-align-end flex-justify-space-between gap-2"
       >
-        <div>
-          <h1>{{ title }}</h1>
-          <p>{{ subtitle }}</p>
-        </div>
-        <span>{{ date }}</span>
+        <h1>Blog Posts</h1>
       </div>
     </header>
-    <main class="blog content">{{ &article }}</main>
+    <main class="blog content">{{ &posts }}</main>
     <footer class="footer center">
       <div class="content p-2 flex flex-justify-end flex-align-center gap-2">
         <a
