@@ -6,7 +6,7 @@ import mustache from "mustache";
 import path from "path";
 
 const mdIt = new markdownIt();
-const blogFileNames = await glob("/blog/**/*.md");
+const blogFileNames = await glob("./blog/**/*.md");
 const blogPostTemplate = await fs.readFile(
   "./compiler/template/blog-post.html",
   {
@@ -39,8 +39,8 @@ const writeFile = async (fileName, content) => {
 
 const processFile = async (fileName) => {
   const newFileName = path.join(
-    "/public/posts",
-    fileName.replace("/blog/", "").replace(".md", ".html")
+    "./public/posts",
+    fileName.replace("./blog/", "").replace(".md", ".html")
   );
 
   const contentString = await fs.readFile(fileName, { encoding: "utf-8" });
