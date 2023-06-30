@@ -1,10 +1,11 @@
 header.blog.header {
   position: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
-header.blog > h1 {
+header.blog {
   text-align: start;
-  width: 100%;
 }
 
 header.blog .home {

@@ -38,6 +38,10 @@ body {
   align-items: center;
 }
 
+.flex-align-end {
+  align-items: end;
+}
+
 .gap-2 {
   gap: calc(var(--grid-px) * 2);
 }
