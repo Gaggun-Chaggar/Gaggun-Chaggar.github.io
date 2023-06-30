@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "doit": "node ./src/index.js"
+    "doit": "node ./compiler/src/index.js"
   },
   "author": "",
   "license": "ISC",
