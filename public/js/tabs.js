@@ -174,6 +174,10 @@ const useSwitchView = (tablist, tabs, tabPanels) => {
       h2.innerText = tabTitle;
       h2.className = "tab-heading fg-secondary p-2";
 
+      if (index === 0) {
+        h2.className += " sr-only";
+      }
+
       tabpanel.prepend(h2);
 
       tabpanel.removeAttribute("role");
