@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "doit": "node ./compiler/src/index.js"
+    "compile": "node ./compiler/src/index.js",
+    "doit": "npm i && npm run compile"
   },
   "author": "",
   "license": "ISC",
