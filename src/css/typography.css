@@ -1,0 +1,96 @@
+:root {
+  font-family: "Noto Serif", serif;
+
+  color: var(--colour-text);
+  --text-margin: 2px;
+
+  * {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  all: unset;
+  display: block;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: calc(var(--text-margin) * 4);
+  font-family: "Noto Sans";
+}
+
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: calc(var(--text-margin) * 3);
+  font-family: "Noto Sans";
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: calc(var(--text-margin) * 2);
+  font-family: "Noto Sans";
+}
+
+h4 {
+  font-size: 14px;
+  margin-bottom: calc(var(--text-margin) * 2);
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: calc(var(--text-margin) * 2);
+}
+
+@media (min-width: 768px) {
+  * {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: calc(var(--text-margin) * 3);
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: calc(var(--text-margin) * 3);
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: var(--text-margin);
+  }
+
+  h4 {
+    font-size: 14px;
+    margin-bottom: calc(var(--text-margin));
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: var(--text-margin);
+  }
+}
+
+a,
+a:visited {
+  all: unset;
+  font-family: "Noto Sans";
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: var(--colour-bold);
+}

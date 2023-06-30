@@ -1,0 +1,33 @@
+:root {
+  --colour-primary: hsl(33, 30%, 91%);
+  --colour-secondary: hsl(185, 84%, 38%);
+  --colour-bold: hsl(4, 99%, 66%);
+  --colour-text: hsl(33, 10%, 25%);
+  --colour-dark: hsl(53, 8%, 15%);
+  --colour-primary-dark: hsl(33, 42%, 78%);
+  --colour-dark-darker: hsl(53, 8%, 5%);
+}
+
+.bg-primary {
+  background-color: var(--colour-primary);
+}
+
+.bg-secondary {
+  background-color: var(--colour-secondary);
+}
+
+.bg-bold {
+  background-color: var(--colour-bold);
+}
+
+.fg-primary {
+  color: var(--colour-primary);
+}
+
+.fg-secondary {
+  color: var(--colour-secondary);
+}
+
+.fg-bold {
+  color: var(--colour-bold);
+}

@@ -1,0 +1,16 @@
+@import url("./typography.css");
+@import url("./colours.css");
+@import url("./base.css");
+@import url("./nav.css");
+@import url("./timeline.css");
+
+:root {
+  --grid-px: 8px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --grid-px: 12px;
+  }
+}

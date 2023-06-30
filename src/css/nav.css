@@ -1,0 +1,73 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-top: var(--grid-px);
+}
+
+a.tab {
+  color: var(--colour-black);
+  padding-top: var(--grid-px);
+  padding-left: calc(var(--grid-px) * 2);
+  padding-right: calc(var(--grid-px) * 2);
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: hsla(0, 0%, 0%, 0);
+  transition: color var(--transition), border var(--transition);
+}
+
+a.tab:visited {
+  color: var(--colour-black);
+}
+
+a.tab:active {
+  color: var(--colour-bold);
+}
+
+a.tab.active,
+a.tab:hover {
+  color: var(--colour-secondary);
+  border-bottom-color: var(--colour-secondary);
+}
+
+a.tab:focus-visible {
+  color: var(--colour-bold);
+  border-bottom-color: var(--colour-bold);
+}
+
+.tabpanel[role="tabpanel"] {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity var(--transition);
+}
+
+@media (min-width: 768px) {
+  .tabpanel[role="tabpanel"].hidden {
+    display: none;
+  }
+
+  .tabpanel[role="tabpanel"].hidden-fade-in {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.tab-heading {
+  margin: 0;
+  position: relative;
+}
+
+.section {
+  margin-bottom: calc(4 * var(--grid-px));
+  position: relative;
+}
+
+.section:before {
+  content: "";
+  width: 2px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: var(--colour-primary-dark);
+  border-radius: 1px;
+}
