@@ -30,6 +30,10 @@ body {
   justify-content: end;
 }
 
+.flex-justify-space-between {
+  justify-content: space-between;
+}
+
 .flex-align-center {
   align-items: center;
 }

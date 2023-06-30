@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="description" content="" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body class="bg-primary">
+    <header class="blog header content p-2">
+      <a class="home" href="/">
+        <i class="fas fa-house-chimney"></i>
+        Home
+      </a>
+      <div class="flex flex-row flex-align-center flex-justify-space-between">
+        <h1>{{ title }}</h1>
+        <span>{{ date }}</span>
+      </div>
+    </header>
+    <main class="blog content">{{ &article }}</main>
+    <footer class="footer center">
+      <div class="content p-2 flex flex-justify-end flex-align-center gap-2">
+        <a
+          href="https://www.linkedin.com/in/gaggun-chaggar-44bb45137/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/Gaggun-Chaggar" target="_blank">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>

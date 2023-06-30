@@ -1,0 +1,18 @@
+header.blog.header {
+  position: inherit;
+}
+
+header.blog > h1 {
+  text-align: start;
+  width: 100%;
+}
+
+header.blog .home {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+main.blog.content {
+  padding-top: calc(2 * var(--grid-px));
+}
