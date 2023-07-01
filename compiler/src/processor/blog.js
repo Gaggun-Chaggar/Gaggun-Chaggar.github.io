@@ -49,11 +49,11 @@ const getCategory = (link) => {
 
 export const processBlog = async () => {
   const blogPostTemplate = await fs.readFile(
-    "./compiler/template/blog-post.thtml",
+    "./compiler/template/blog-post.html",
     utf8enc
   );
   const blogListTemplate = await fs.readFile(
-    "./compiler/template/blog.thtml",
+    "./compiler/template/blog.html",
     utf8enc
   );
 
