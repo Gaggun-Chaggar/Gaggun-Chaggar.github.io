@@ -65,8 +65,12 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
     }
 
     const setTrackerPosition = () => {
-      tabTracker.style.left = `${tabs[index].offsetLeft}px`;
-      tabTracker.style.width = `${tabs[index].offsetWidth}px`;
+      tabTracker.style.setProperty(
+        "--offset",
+        `calc(${
+          tabs[index].offsetLeft + tabs[index].offsetWidth / 2
+        }px - var(--grid-px) - var(--radius))`
+      );
     };
 
     // handle initial page load

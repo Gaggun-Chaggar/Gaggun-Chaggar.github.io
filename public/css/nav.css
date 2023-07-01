@@ -70,12 +70,29 @@ a.tab:focus-visible {
   }
 
   .tab-tracker {
+    --radius: 6px;
+    --offset: 0px;
     position: absolute;
-    width: 0px;
-    height: 2px;
-    background-color: var(--colour-secondary);
-    bottom: -2px;
     left: 0;
     transition: all var(--transition);
+    background-color: var(--colour-secondary);
+    border: var(--grid-px) solid var(--colour-primary);
+    border-radius: 100%;
+    content: "";
+    height: calc(var(--radius) * 2);
+    width: calc(var(--radius) * 2);
+    left: var(--offset);
+    bottom: calc(-1 * ((var(--grid-px) + var(--radius)) + 1px));
+  }
+
+  .tab-tracker:empty::after {
+    content: "";
+    position: absolute;
+    background-color: var(--colour-secondary);
+    display: block;
+    height: 2px;
+    width: 36px;
+    top: calc(50% - 1px);
+    left: -12px;
   }
 }
