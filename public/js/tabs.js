@@ -74,7 +74,9 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
       tabTracker.style.width = `${tabs[index].offsetWidth}px`;
     };
 
-    setTrackerPosition();
+    setTimeout(() => {
+      setTrackerPosition();
+    }, 100);
     window.addEventListener("resize", setTrackerPosition);
     activeResizer = setTrackerPosition;
   };
