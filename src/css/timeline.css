@@ -47,8 +47,9 @@
   bottom: 0;
   position: absolute;
   background-color: var(--colour-primary);
-  border-radius: 100%;
+  border-radius: 2px;
   border: 2px solid var(--colour-dark);
+  transform: rotate(45deg);
 }
 
 .timeline-title:before {
