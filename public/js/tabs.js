@@ -38,12 +38,13 @@ const handleTabs = (tablist) => {
   });
 
   // set state
-  tabs.forEach((_, i) => {
-    if (i === 0) return;
-    setTabInactive(i);
-  });
+  tabs.forEach((_, i) => setTabInactive(i));
 
-  setTabActive(0);
+  const route = document.location.hash;
+  const firstActiveTabIndex = [...tabs].findIndex(
+    (t) => t.getAttribute("href") === route
+  );
+  setTabActive(firstActiveTabIndex > -1 ? firstActiveTabIndex : 0);
 };
 
 /**
