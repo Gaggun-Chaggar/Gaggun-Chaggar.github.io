@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "compile": "node ./compiler/index.js",
-    "css:min": "postcss --use postcss-import --use autoprefixer --use cssnano -o public/css/min.css src/css/main.css --no-map",
+    "css:min": "postcss --use postcss-import --use autoprefixer --use cssnano -o src/css/min.css src/css/main.css --no-map",
     "build": "npm run css:min && npm run compile",
     "doit": "npm i && npm run build",
     "build:watch": "nodemon --exec npm run build --watch src --watch compiler -e js,md,html,css",

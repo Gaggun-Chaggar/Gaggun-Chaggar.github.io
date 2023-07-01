@@ -5,10 +5,11 @@ import markdownIt from "markdown-it";
 import mustache from "mustache";
 import path from "path";
 import { createFullTemplate } from "./doc.js";
+import { blogsPath, templatesPath } from "./folders.js";
 import { utf8enc } from "./utils.js";
 const mdIt = new markdownIt();
 
-const blogFileNames = await glob("src/blog/**/*.md");
+const blogFileNames = await glob(`${blogsPath}/**/*.md`);
 
 /**
  * @param {string} fileName
@@ -50,14 +51,14 @@ const getCategory = (link) => {
 
 export const processBlog = async () => {
   const blogPostTemplate = createFullTemplate({
-    body: await fs.readFile("src/templates/blog-post.html", utf8enc),
+    body: await fs.readFile(`${templatesPath}/blog-post.html`, utf8enc),
     assets: `<link rel="stylesheet" href="/css/font-awesome.css" />
               <link rel="stylesheet" href="/css/blog-header.css" />`,
     title: "{{title}}",
     description: "{{description}}",
   });
   const blogListTemplate = createFullTemplate({
-    body: await fs.readFile("src/templates/blog.html", utf8enc),
+    body: await fs.readFile(`${templatesPath}/blog.html`, utf8enc),
     assets: `<link rel="stylesheet" href="/css/font-awesome.css" />
               <link rel="stylesheet" href="/css/blog.css" />`,
     title: "Gaggun Chaggar - Blog",
@@ -73,7 +74,7 @@ export const processBlog = async () => {
   const processFile = async (fileName) => {
     const newFileName = path.join(
       "public/posts",
-      fileName.replace("src/blog/", "").replace(".md", ".html")
+      fileName.replace(blogsPath, "").replace(".md", ".html")
     );
     const contentString = await fs.readFile(fileName, utf8enc);
     const data = frontmatter(contentString);

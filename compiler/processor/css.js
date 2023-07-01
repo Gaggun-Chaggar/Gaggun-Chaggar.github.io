@@ -1,9 +1,10 @@
 import { promises as fs } from "fs";
 import { glob } from "glob";
+import { cssPath } from "./folders.js";
 import { utf8enc } from "./utils.js";
 
 export const processCSS = async () => {
-  const css = await fs.readFile("public/css/min.css");
+  const css = await fs.readFile(`${cssPath}/min.css`);
   const htmlFileNames = await glob("public/**/*.html");
 
   for (const fileName of htmlFileNames) {
