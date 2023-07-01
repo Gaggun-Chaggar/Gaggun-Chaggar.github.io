@@ -1,0 +1,10 @@
+.about-content {
+  flex-direction: column;
+  gap: var(--grid-px);
+}
+
+@media (min-width: 496px) {
+  .about-content {
+    flex-direction: row;
+  }
+}
