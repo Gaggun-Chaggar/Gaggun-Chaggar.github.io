@@ -83,6 +83,7 @@ a.tab:focus-visible {
   width: 36px;
   top: calc(50% - 1px);
   left: -12px;
+  border-radius: 1px;
 }
 
 @media (min-width: 768px) {

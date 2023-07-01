@@ -27,7 +27,6 @@
   bottom: 0;
   position: absolute;
   background-color: var(--colour-primary-dark);
-  border-radius: 1px;
 }
 
 .timeline-item {
@@ -38,16 +37,28 @@
   position: relative;
 }
 
-.timeline-title:before {
+.timeline-title:after {
   --radius: 6px;
   content: "";
   width: calc(2 * var(--radius));
   height: calc(2 * var(--radius));
-  left: calc(-2 * var(--grid-px) - var(--radius) - var(--grid-px) + 1px);
-  top: calc(50% - var(--radius) - var(--grid-px) + 1px);
+  left: calc(-2 * var(--grid-px) - var(--radius) + 1px);
+  top: calc(50% - var(--radius) + 1px);
   bottom: 0;
   position: absolute;
   background-color: var(--colour-dark);
   border-radius: 100%;
-  border: var(--grid-px) solid var(--colour-primary);
+}
+
+.timeline-title:before {
+  --height: 24px;
+  content: "";
+  position: absolute;
+  background-color: var(--colour-dark);
+  display: block;
+  height: var(--height);
+  width: 2px;
+  top: calc(50% - var(--height) / 2 + 1px);
+  left: calc(-2 * var(--grid-px));
+  border-radius: 2px;
 }
