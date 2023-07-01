@@ -4,6 +4,8 @@
 const handleTabs = (tablist) => {
   const tabs = tablist.querySelectorAll(".tab");
 
+  const tabTracker = tablist.parentElement.querySelector(".tab-tracker");
+
   const tabPanels = [...tabs].map((tab) => {
     const panelId = tab.getAttribute("aria-controls");
     return document.getElementById(panelId);
@@ -11,7 +13,8 @@ const handleTabs = (tablist) => {
 
   const { setTabActive, setTabInactive, createOnClickEvent } = useSetTabState(
     tabs,
-    tabPanels
+    tabPanels,
+    tabTracker
   );
   const { createOnKeydownEvent } = useKeyboardEvents(tabs);
 
@@ -41,9 +44,11 @@ const handleTabs = (tablist) => {
 /**
  * @param {NodeListOf<Element>} tabs
  * @param {NodeListOf<Element>} tabPanels
+ * @param {HTMLElement} tabTracker
  */
-const useSetTabState = (tabs, tabPanels) => {
+const useSetTabState = (tabs, tabPanels, tabTracker) => {
   let activeTabIndex = 0;
+  let activeResizer;
 
   /**
    * @param {number} index
@@ -59,6 +64,19 @@ const useSetTabState = (tabs, tabPanels) => {
     }, 1);
 
     activeTabIndex = index;
+
+    if (!tabTracker) {
+      return;
+    }
+
+    const setTrackerPosition = () => {
+      tabTracker.style.left = `${tabs[index].offsetLeft}px`;
+      tabTracker.style.width = `${tabs[index].offsetWidth}px`;
+    };
+
+    setTrackerPosition();
+    window.addEventListener("resize", setTrackerPosition);
+    activeResizer = setTrackerPosition;
   };
 
   /**
@@ -69,6 +87,8 @@ const useSetTabState = (tabs, tabPanels) => {
     tabs[index].setAttribute("tabindex", "-1");
     tabs[index].classList.remove("active");
     tabPanels[index].classList.add("hidden");
+
+    window.removeEventListener("resize", activeResizer);
   };
 
   /**

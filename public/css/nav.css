@@ -59,3 +59,15 @@ a.tab:focus-visible {
 .section {
   margin-bottom: calc(4 * var(--grid-px));
 }
+
+@media (min-width: 768px) {
+  .tab-tracker {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: var(--colour-secondary);
+    bottom: -2px;
+    left: 0;
+    transition: all var(--transition);
+  }
+}
