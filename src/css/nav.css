@@ -66,12 +66,13 @@ a.tab:focus-visible {
   position: absolute;
   transition: all var(--transition);
   background-color: var(--colour-secondary);
-  border-radius: 100%;
+  border-radius: 2px;
   content: "";
   height: calc(var(--radius) * 2);
   width: calc(var(--radius) * 2);
   left: 50%;
   bottom: calc(-1 * (var(--radius) + 1px));
+  transform: rotate(45deg);
 }
 
 .tab-tracker:empty::after {
@@ -84,6 +85,7 @@ a.tab:focus-visible {
   top: calc(50% - 1px);
   left: -12px;
   border-radius: 1px;
+  transform: rotate(-45deg);
 }
 
 @media (min-width: 768px) {
