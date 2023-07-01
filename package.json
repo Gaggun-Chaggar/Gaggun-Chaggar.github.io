@@ -5,19 +5,23 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "compile": "node ./compiler/src/index.js",
+    "compile": "node ./compiler/index.js",
     "css:min": "postcss --use postcss-import --use autoprefixer --use cssnano -o public/css/min.css src/css/main.css --no-map",
     "build": "npm run css:min && npm run compile",
     "doit": "npm i && npm run build",
-    "dev": "nodemon --exec npm run build --watch src --watch compiler -e js,md,html,css"
+    "build:watch": "nodemon --exec npm run build --watch src --watch compiler -e js,md,html,css",
+    "serve": "cd public && http-server -c-1",
+    "dev": "concurrently npm:build:watch npm:serve"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.0",
     "cssnano": "^6.0.1",
     "front-matter": "^4.0.2",
     "glob": "^10.3.1",
+    "http-server": "^14.1.1",
     "markdown-it": "^13.0.1",
     "mustache": "^4.2.0",
     "nodemon": "^2.0.22",
