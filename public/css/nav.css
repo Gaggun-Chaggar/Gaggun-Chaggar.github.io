@@ -71,7 +71,7 @@ a.tab:focus-visible {
 
   .tab-tracker {
     position: absolute;
-    width: 20px;
+    width: 0px;
     height: 2px;
     background-color: var(--colour-secondary);
     bottom: -2px;
