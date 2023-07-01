@@ -4,7 +4,7 @@
   font-weight: normal, 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSerif/NotoSerif-Regular.ttf") format("truetype");
+  src: url("/fonts/NotoSerif/NotoSerif-Regular.otf") format("truetype");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-weight: 300;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSerif/NotoSerif-Light.ttf") format("truetype");
+  src: url("/fonts/NotoSerif/NotoSerif-Light.otf") format("truetype");
 }
 
 @font-face {
@@ -22,25 +22,7 @@
   font-weight: 300;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSerif/NotoSerif-LightItalic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Noto Serif";
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/NotoSerif/NotoSerif-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Noto Serif";
-  font-style: normal;
-  font-weight: 600;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/NotoSerif/NotoSerif-SemiBold.ttf") format("truetype");
+  src: url("/fonts/NotoSerif/NotoSerif-LightItalic.otf") format("truetype");
 }
 
 @font-face {
@@ -49,7 +31,8 @@
   font-weight: normal;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSans/NotoSans-Regular.ttf") format("truetype");
+  font-variation-settings: "wght" 400;
+  src: url("/fonts/NotoSans/NotoSans[wght].ttf") format("truetype");
 }
 
 @font-face {
@@ -58,16 +41,7 @@
   font-weight: 300;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSans/NotoSans-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  font-style: italic;
-  font-weight: 300;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/fonts/NotoSans/NotoSans-LightItalic.ttf") format("truetype");
+  src: url("/fonts/NotoSans/NotoSans-Light.otf") format("truetype");
 }
 
 @font-face {
@@ -76,7 +50,8 @@
   font-weight: 700;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSans/NotoSans-Bold.ttf") format("truetype");
+  font-variation-settings: "wght" 700;
+  src: url("/fonts/NotoSans/NotoSans[wght].ttf") format("truetype");
 }
 
 @font-face {
@@ -85,5 +60,6 @@
   font-weight: 600;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/fonts/NotoSans/NotoSans-SemiBold.ttf") format("truetype");
+  font-variation-settings: "wght" 600;
+  src: url("/fonts/NotoSans/NotoSans[wght].ttf") format("truetype");
 }
