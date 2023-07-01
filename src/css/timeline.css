@@ -38,16 +38,17 @@
 }
 
 .timeline-title:after {
-  --radius: 6px;
+  --radius: 4px;
   content: "";
   width: calc(2 * var(--radius));
   height: calc(2 * var(--radius));
-  left: calc(-2 * var(--grid-px) - var(--radius) + 1px);
-  top: calc(50% - var(--radius) + 1px);
+  left: calc(-2 * var(--grid-px) - var(--radius) - 1px);
+  top: calc(50% - var(--radius) - 1px);
   bottom: 0;
   position: absolute;
-  background-color: var(--colour-dark);
+  background-color: var(--colour-primary);
   border-radius: 100%;
+  border: 2px solid var(--colour-dark);
 }
 
 .timeline-title:before {
