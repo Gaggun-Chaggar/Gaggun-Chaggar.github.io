@@ -4,7 +4,7 @@ import { utf8enc } from "./utils.js";
 
 export const processCSS = async () => {
   const css = await fs.readFile("public/css/min.css");
-  const htmlFileNames = await glob("**/*.{html,thtml}");
+  const htmlFileNames = await glob("**/*.html");
 
   for (const fileName of htmlFileNames) {
     const file = await fs.readFile(fileName, utf8enc);
