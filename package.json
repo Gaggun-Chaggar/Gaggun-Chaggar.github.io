@@ -6,14 +6,20 @@
   "type": "module",
   "scripts": {
     "compile": "node ./compiler/src/index.js",
-    "doit": "npm i && npm run compile"
+    "css:min": "postcss --use postcss-import --use autoprefixer --use cssnano -o public/css/min.css public/css/main.css --no-map",
+    "doit": "npm i && npm run compile && npm run css:min"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
     "front-matter": "^4.0.2",
     "glob": "^10.3.1",
     "markdown-it": "^13.0.1",
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
   }
 }
