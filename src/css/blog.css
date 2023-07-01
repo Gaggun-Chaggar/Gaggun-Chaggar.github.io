@@ -1,0 +1,37 @@
+@import url("./blog-header.css");
+.blog-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-posts > li.blog-post > a {
+  color: var(--colour-text);
+}
+
+.blog-posts > li.blog-post {
+  border-bottom: 1px solid var(--colour-primary-dark);
+  padding-top: calc(2 * var(--grid-px));
+  padding-bottom: calc(2 * var(--grid-px));
+}
+
+.blog-posts > li.blog-post > a .category,
+.blog-posts > li.blog-post > a > .date {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.blog-posts > li.blog-post > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition);
+}
+
+.blog-posts > li.blog-post > a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--colour-text);
+}

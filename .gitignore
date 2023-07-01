@@ -129,6 +129,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 .DS_Store
-/public/posts/*
 /public/css/min.css
-/public/blog.html
+/public/**/*.html

@@ -1,0 +1,14 @@
+main.error-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 74px);
+  width: 100%;
+  flex-direction: column;
+  gap: var(--grid-px);
+}
+h1.huge {
+  font-size: 72px;
+}
