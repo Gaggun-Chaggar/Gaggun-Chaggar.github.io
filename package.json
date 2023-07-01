@@ -10,7 +10,7 @@
     "css:min": "postcss --use postcss-import --use autoprefixer --use cssnano -o public/css/min.css public/css/main.css --no-map",
     "doit": "npm i && npm run css:min && npm run compile",
     "css:watch": "nodemon --exec npm run css:min --watch public/css -e css",
-    "blog:watch": "nodemon --exec npm run compile:dev --watch blog --watch compiler -e js,md",
+    "blog:watch": "nodemon --exec npm run compile:dev --watch blog --watch compiler -e js,md,html",
     "dev": "concurrently npm:css:watch npm:blog:watch"
   },
   "author": "",
