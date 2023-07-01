@@ -60,6 +60,32 @@ a.tab:focus-visible {
   margin-bottom: calc(4 * var(--grid-px));
 }
 
+.tab-tracker {
+  --radius: 6px;
+  --offset: 0px;
+  position: absolute;
+  transition: all var(--transition);
+  background-color: var(--colour-secondary);
+  border: var(--grid-px) solid var(--colour-primary);
+  border-radius: 100%;
+  content: "";
+  height: calc(var(--radius) * 2);
+  width: calc(var(--radius) * 2);
+  left: 50%;
+  bottom: calc(-1 * ((var(--grid-px) + var(--radius)) + 1px));
+}
+
+.tab-tracker:empty::after {
+  content: "";
+  position: absolute;
+  background-color: var(--colour-secondary);
+  display: block;
+  height: 2px;
+  width: 36px;
+  top: calc(50% - 1px);
+  left: -12px;
+}
+
 @media (min-width: 768px) {
   .tab-heading {
     display: none;
@@ -70,29 +96,6 @@ a.tab:focus-visible {
   }
 
   .tab-tracker {
-    --radius: 6px;
-    --offset: 0px;
-    position: absolute;
-    left: 0;
-    transition: all var(--transition);
-    background-color: var(--colour-secondary);
-    border: var(--grid-px) solid var(--colour-primary);
-    border-radius: 100%;
-    content: "";
-    height: calc(var(--radius) * 2);
-    width: calc(var(--radius) * 2);
     left: var(--offset);
-    bottom: calc(-1 * ((var(--grid-px) + var(--radius)) + 1px));
-  }
-
-  .tab-tracker:empty::after {
-    content: "";
-    position: absolute;
-    background-color: var(--colour-secondary);
-    display: block;
-    height: 2px;
-    width: 36px;
-    top: calc(50% - 1px);
-    left: -12px;
   }
 }

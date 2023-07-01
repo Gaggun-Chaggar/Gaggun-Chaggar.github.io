@@ -1,3 +1,13 @@
+const debounce = (func, timeout = 300) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+};
+
 /**
  * @param {HTMLElement} tablist
  */
@@ -76,7 +86,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
     // handle initial page load
     setTrackerPosition();
     setTimeout(setTrackerPosition, 150);
-    window.addEventListener("resize", setTrackerPosition);
+    window.addEventListener("resize", debounce(setTrackerPosition, 100));
     activeResizer = setTrackerPosition;
   };
 
