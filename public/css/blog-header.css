@@ -17,3 +17,17 @@ header.blog .home {
 main.blog.content {
   padding-top: calc(2 * var(--grid-px));
 }
+
+.breadcrumb {
+  display: flex;
+  gap: var(--grid-px);
+}
+
+.breadcrumb a {
+  position: relative;
+}
+
+.breadcrumb a:not(:last-child)::after {
+  content: "/";
+  margin-left: var(--grid-px);
+}
