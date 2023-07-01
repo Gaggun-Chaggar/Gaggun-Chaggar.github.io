@@ -66,13 +66,12 @@ a.tab:focus-visible {
   position: absolute;
   transition: all var(--transition);
   background-color: var(--colour-secondary);
-  border: var(--grid-px) solid var(--colour-primary);
   border-radius: 100%;
   content: "";
   height: calc(var(--radius) * 2);
   width: calc(var(--radius) * 2);
   left: 50%;
-  bottom: calc(-1 * ((var(--grid-px) + var(--radius)) + 1px));
+  bottom: calc(-1 * (var(--radius) + 1px));
 }
 
 .tab-tracker:empty::after {

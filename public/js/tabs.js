@@ -79,7 +79,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
         "--offset",
         `calc(${
           tabs[index].offsetLeft + tabs[index].offsetWidth / 2
-        }px - var(--grid-px) - var(--radius))`
+        }px - var(--radius))`
       );
     };
 
