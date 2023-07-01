@@ -1,5 +1,5 @@
 .tabs {
-  display: flex;
+  display: none;
   align-items: center;
   margin-top: var(--grid-px);
 }
@@ -61,6 +61,14 @@ a.tab:focus-visible {
 }
 
 @media (min-width: 768px) {
+  .tab-heading {
+    display: none;
+  }
+
+  .tabs {
+    display: flex;
+  }
+
   .tab-tracker {
     position: absolute;
     width: 20px;
