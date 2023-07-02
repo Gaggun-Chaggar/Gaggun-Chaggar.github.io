@@ -28,7 +28,7 @@ const animateBorder = (timestamp) => {
   }
 
   if (elapsed < 300) {
-    previousTimeStamp = timestamp;
+    previousTimestamp = timestamp;
     window.requestAnimationFrame(animateBorder);
   }
 };
