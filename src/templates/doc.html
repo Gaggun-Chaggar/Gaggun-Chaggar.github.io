@@ -45,6 +45,21 @@
       crossorigin
     />
 
+    <link
+      rel="preload"
+      href="/fonts/FontAwesome/fa-solid-900.woff2"
+      as="font"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="/fonts/FontAwesome/fa-brands-400.woff2"
+      as="font"
+      crossorigin
+    />
+    <link rel="preload" href="/css/font-awesome.css" as="style" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
     <link rel="stylesheet" href="/css/min.css" />
     {{ &assets }}
   </head>
@@ -53,12 +68,15 @@
     {{ &body }}
     <footer class="footer center">
       <div class="content p-2 flex flex-justify-end flex-align-center gap-2">
+        <a href="/blog.html">Blog</a>
         <a
           href="https://www.linkedin.com/in/gaggun-chaggar-44bb45137/"
           target="_blank"
-          >LinkedIn</a
+          ><i class="fab fa-linkedin mr-half"></i>LinkedIn</a
         >
-        <a href="https://github.com/Gaggun-Chaggar" target="_blank">GitHub</a>
+        <a href="https://github.com/Gaggun-Chaggar" target="_blank"
+          ><i class="fab fa-github mr-half"></i>GitHub</a
+        >
       </div>
     </footer>
   </body>

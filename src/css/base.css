@@ -53,6 +53,10 @@ body {
   padding: calc(var(--grid-px) * 2);
 }
 
+.mr-half {
+  margin-right: calc(var(--grid-px) / 2);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

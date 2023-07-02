@@ -53,10 +53,7 @@ export const processBlog = async () => {
   const blogPostTemplate = createFullTemplate({
     body: await fs.readFile(`${templatesPath}/blog-post.html`, utf8enc),
     assets: `
-      <link rel="preload" href="/fonts/FontAwesome/fa-solid-900.woff2" as="font" crossorigin />
-      <link rel="preload" href="/css/font-awesome.css" as="style"/>
       <link rel="preload" href="/css/blog-header.css" as="style"/>
-      <link rel="stylesheet" href="/css/font-awesome.css" />
       <link rel="stylesheet" href="/css/blog-header.css" />
     `,
     title: "{{title}}",
@@ -65,10 +62,7 @@ export const processBlog = async () => {
   const blogListTemplate = createFullTemplate({
     body: await fs.readFile(`${templatesPath}/blog.html`, utf8enc),
     assets: `
-    <link rel="preload" href="/fonts/FontAwesome/fa-solid-900.woff2" as="font" crossorigin />
-    <link rel="preload" href="/css/font-awesome.css" as="style"/>
     <link rel="preload" href="/css/blog.css" as="style"/>
-    <link rel="stylesheet" href="/css/font-awesome.css" />
     <link rel="stylesheet" href="/css/blog.css" />
     `,
     title: "Gaggun Chaggar - Blog",

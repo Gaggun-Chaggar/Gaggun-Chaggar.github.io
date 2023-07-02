@@ -17,6 +17,14 @@
     url(/fonts/FontAwesome/fa-solid-900.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-display: block;
+  font-weight: 400;
+  src: url("/fonts/FontAwesome/fa-brands-400.woff2") format("woff2"),
+    url("/fonts/FontAwesome/fa-brands-400.ttf") format("truetype");
+}
+
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
@@ -57,4 +65,16 @@
 
 .fa-house-chimney::before {
   content: "\e3af";
+}
+
+.fa-github-alt:before {
+  content: "\f113";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+.fa-linkedin:before {
+  content: "\f08c";
 }
