@@ -3,17 +3,34 @@
  */
 const memoji = document.querySelector(".memoji > div");
 
-const increment = 8;
-const start = -30;
-const frames = 24;
+const animationLength = 300;
+const endDegree = 170;
 
-const animateBorder = (i) => {
-  const deg = i * increment + start;
-  memoji.style.borderImageSource = `linear-gradient(${deg}deg, var(--grad-colours))`;
+let startTime, previousTimestamp, done;
 
-  if (i <= frames) {
-    window.requestAnimationFrame(() => animateBorder(i + 1));
+const animateBorder = (timestamp) => {
+  if (startTime === undefined) {
+    startTime = timestamp;
+  }
+
+  const elapsed = timestamp - startTime;
+
+  if (timestamp !== previousTimestamp) {
+    const deg = Math.min((elapsed / animationLength) * endDegree, endDegree);
+    memoji.style.borderImageSource = `linear-gradient(${deg}deg, var(--grad-colours))`;
+    if (deg === 170) {
+      done = true;
+    }
+  }
+
+  if (done) {
+    return;
+  }
+
+  if (elapsed < 300) {
+    previousTimeStamp = timestamp;
+    window.requestAnimationFrame(animateBorder);
   }
 };
 
-window.requestAnimationFrame(() => animateBorder(1));
+window.requestAnimationFrame(animateBorder);
