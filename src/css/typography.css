@@ -1,6 +1,7 @@
 :root {
-  --serif: "Noto Serif", garamond, georgia, serif;
-  --sans: "Noto Sans", helvetica, arial, sans-serif;
+  --serif: "Noto Serif", constantia, palatino, georgia, serif;
+  --sans: "Noto Sans", -apple-system, BlinkMacSystemFont, helvetica, arial,
+    sans-serif;
   font-family: var(--serif);
 
   color: var(--colour-text);
