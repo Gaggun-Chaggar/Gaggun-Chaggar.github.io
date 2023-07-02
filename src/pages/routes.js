@@ -10,6 +10,14 @@ export const pages = [
     src: "src/pages/index.html",
     title: "Gaggun Chaggar",
     description: "I'm him",
-    assets: `<link rel="preload" href="/static/me-380x380.webp" as="image" />`,
+    assets: `
+    <link
+      rel="preload"
+      href="/fonts/FontAwesome/fa-brands-400.woff2"
+      as="font"
+      crossorigin
+    />
+    <link rel="preload" href="/static/me-380x380.webp" as="image" />
+    `,
   },
 ];
