@@ -9,45 +9,6 @@ const debounce = (func, timeout = 300) => {
 };
 
 /**
- * @param {HTMLElement} tablist
- */
-const handleTabs = (tablist) => {
-  const tabs = tablist.querySelectorAll(".tab");
-
-  const tabTracker = tablist.parentElement.querySelector(".tab-tracker");
-
-  const tabPanels = [...tabs].map((tab) => {
-    const panelId = tab.getAttribute("aria-controls");
-    return document.getElementById(panelId);
-  });
-
-  const { setTabActive, setTabInactive, createOnClickEvent } = useSetTabState(
-    tabs,
-    tabPanels,
-    tabTracker
-  );
-  const { createOnKeydownEvent } = useKeyboardEvents(tabs);
-
-  // add event listeners
-  tabs.forEach((tab, index) => {
-    const onClick = createOnClickEvent(index);
-    const onKeydown = createOnKeydownEvent(index);
-
-    tab.addEventListener("click", onClick);
-    tab.addEventListener("keydown", onKeydown);
-  });
-
-  // set state
-  tabs.forEach((_, i) => setTabInactive(i));
-
-  const route = document.location.hash;
-  const firstActiveTabIndex = [...tabs].findIndex(
-    (t) => t.getAttribute("href") === route
-  );
-  setTabActive(firstActiveTabIndex > -1 ? firstActiveTabIndex : 0);
-};
-
-/**
  * @param {NodeListOf<Element>} tabs
  * @param {NodeListOf<Element>} tabPanels
  * @param {HTMLElement} tabTracker
@@ -86,7 +47,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
 
     // handle initial page load
     setTrackerPosition();
-    setTimeout(setTrackerPosition, 150);
+    document.fonts.ready.then(setTrackerPosition);
     window.addEventListener("resize", debounce(setTrackerPosition, 100));
     activeResizer = setTrackerPosition;
   };
@@ -187,4 +148,43 @@ const useKeyboardEvents = (tabs) => {
   };
 };
 
-handleTabs(document.querySelector("nav[role='tablist']"));
+/**
+ * @param {HTMLElement} tablist
+ */
+const handleTabs = (tablist) => {
+  const tabs = tablist.querySelectorAll(".tab");
+
+  const tabTracker = tablist.parentElement.querySelector(".tab-tracker");
+
+  const tabPanels = [...tabs].map((tab) => {
+    const panelId = tab.getAttribute("aria-controls");
+    return document.getElementById(panelId);
+  });
+
+  const { setTabActive, setTabInactive, createOnClickEvent } = useSetTabState(
+    tabs,
+    tabPanels,
+    tabTracker
+  );
+  const { createOnKeydownEvent } = useKeyboardEvents(tabs);
+
+  // add event listeners
+  tabs.forEach((tab, index) => {
+    const onClick = createOnClickEvent(index);
+    const onKeydown = createOnKeydownEvent(index);
+
+    tab.addEventListener("click", onClick);
+    tab.addEventListener("keydown", onKeydown);
+  });
+
+  // set state
+  tabs.forEach((_, i) => setTabInactive(i));
+
+  const route = document.location.hash;
+  const firstActiveTabIndex = [...tabs].findIndex(
+    (t) => t.getAttribute("href") === route
+  );
+  setTabActive(firstActiveTabIndex > -1 ? firstActiveTabIndex : 0);
+};
+
+handleTabs(document.querySelector("nav"));
