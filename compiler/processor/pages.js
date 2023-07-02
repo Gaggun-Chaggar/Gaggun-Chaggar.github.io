@@ -2,8 +2,9 @@ import frontmatter from "front-matter";
 import { promises as fs } from "fs";
 import { glob } from "glob";
 import { createFullTemplate } from "./doc.js";
-import { pagesPath } from "./folders.js";
 import { utf8enc } from "./utils.js";
+
+const pagesPath = "src/pages";
 
 const pages = await glob(`${pagesPath}/**/*.html`);
 
@@ -21,7 +22,7 @@ export const processPages = async () => {
       assets: fileData.attributes.assets,
     });
 
-    const filePath = "public/" + page.replace("src/pages/", "");
+    const filePath = "public/" + page.replace(pagesPath + "/", "");
     await fs.writeFile(filePath, doc, utf8enc);
   }
 };

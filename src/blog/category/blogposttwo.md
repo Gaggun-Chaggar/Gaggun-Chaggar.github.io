@@ -1,6 +1,7 @@
 ---
 title: "Blog Post Two"
 subtitle: "What it do?"
+description: "Second post"
 date: "2023-06-30"
 ---
 

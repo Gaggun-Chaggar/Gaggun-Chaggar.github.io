@@ -1,7 +1,8 @@
 import { promises as fs } from "fs";
 import { glob } from "glob";
-import { cssPath } from "./folders.js";
 import { utf8enc } from "./utils.js";
+
+const cssPath = "src/css";
 
 export const processCSS = async () => {
   const css = await fs.readFile(`${cssPath}/min.css`);

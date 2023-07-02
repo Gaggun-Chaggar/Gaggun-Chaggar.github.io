@@ -5,8 +5,10 @@ import markdownIt from "markdown-it";
 import mustache from "mustache";
 import path from "path";
 import { createFullTemplate } from "./doc.js";
-import { blogsPath, templatesPath } from "./folders.js";
-import { utf8enc } from "./utils.js";
+import { templatesPath, utf8enc } from "./utils.js";
+
+const blogsPath = "src/blog";
+
 const mdIt = new markdownIt();
 
 const blogFileNames = await glob(`${blogsPath}/**/*.md`);
@@ -49,37 +51,41 @@ const getCategory = (link) => {
   return path.join(" / ");
 };
 
+const getTemplates = async () => {
+  const blogPostTemplate = await fs.readFile(
+    `${templatesPath}/blog-post.html`,
+    utf8enc
+  );
+  const blogPostTemplateData = frontmatter(blogPostTemplate);
+
+  const fullBlogPostTemplate = createFullTemplate({
+    body: blogPostTemplateData.body,
+    assets: blogPostTemplateData.attributes.assets,
+    title: "{{ &title }}",
+    description: "{{ &description }}",
+  });
+
+  const blogListTemplate = await fs.readFile(
+    `${templatesPath}/blog.html`,
+    utf8enc
+  );
+  const blogListTemplateData = frontmatter(blogListTemplate);
+
+  const fullBlogListTemplate = createFullTemplate({
+    body: blogListTemplateData.body,
+    assets: blogListTemplateData.attributes.assets,
+    title: blogListTemplateData.attributes.title,
+    description: blogListTemplateData.attributes.description,
+  });
+
+  return {
+    fullBlogListTemplate,
+    fullBlogPostTemplate,
+  };
+};
+
 export const processBlog = async () => {
-  const blogPostTemplate = createFullTemplate({
-    body: await fs.readFile(`${templatesPath}/blog-post.html`, utf8enc),
-    assets: `
-        <link
-        rel="preload"
-        href="/fonts/FontAwesome/fa-solid-900.woff2"
-        as="font"
-        crossorigin
-      />
-      <link rel="preload" href="/css/blog-header.css" as="style"/>
-      <link rel="stylesheet" href="/css/blog-header.css" />
-    `,
-    title: "{{title}}",
-    description: "{{description}}",
-  });
-  const blogListTemplate = createFullTemplate({
-    body: await fs.readFile(`${templatesPath}/blog.html`, utf8enc),
-    assets: `
-      <link
-      rel="preload"
-      href="/fonts/FontAwesome/fa-solid-900.woff2"
-      as="font"
-      crossorigin
-    />
-    <link rel="preload" href="/css/blog.css" as="style"/>
-    <link rel="stylesheet" href="/css/blog.css" />
-    `,
-    title: "Gaggun Chaggar - Blog",
-    description: "Some posts from myself",
-  });
+  const { fullBlogListTemplate, fullBlogPostTemplate } = await getTemplates();
 
   const blogPosts = [];
 
@@ -97,14 +103,13 @@ export const processBlog = async () => {
     const html = mdIt.render(data.body);
 
     const attributes = {
-      title: data.attributes.title,
-      subtitle: data.attributes.subtitle,
+      ...data.attributes,
       date: Intl.DateTimeFormat("en-DB", {}).format(
         new Date(data.attributes.date)
       ),
     };
 
-    const blogPost = mustache.render(blogPostTemplate, {
+    const blogPost = mustache.render(fullBlogPostTemplate, {
       ...attributes,
       article: html,
     });
@@ -113,6 +118,7 @@ export const processBlog = async () => {
 
     blogPosts.push({
       ...attributes,
+      dateAsObject: new Date(data.attributes.date),
       link: newFileName.replace("public", ""),
     });
   };
@@ -123,11 +129,12 @@ export const processBlog = async () => {
 
   /**
    *
-   * @param {{ title: string; subtitle: string; date: string }[]} blogPosts
+   * @param {{ title: string; subtitle: string; date: string; dateAsObject: Date }[]} blogPosts
    */
   const createBlogList = (blogPosts) => {
     const posts = `<ul class="blog-posts">
       ${blogPosts
+        .sort((a, b) => b.dateAsObject.getTime() - a.dateAsObject.getTime())
         .map(
           (post) => `
           <li class="blog-post">
@@ -148,7 +155,7 @@ export const processBlog = async () => {
         .join("")}
     </ul>`;
 
-    const html = mustache.render(blogListTemplate, { posts });
+    const html = mustache.render(fullBlogListTemplate, { posts });
 
     fs.writeFile("public/blog.html", html, utf8enc);
   };

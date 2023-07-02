@@ -1,7 +1,6 @@
 import { promises as fs } from "fs";
 import mustache from "mustache";
-import { templatesPath } from "./folders.js";
-import { utf8enc } from "./utils.js";
+import { templatesPath, utf8enc } from "./utils.js";
 
 const docTemplate = await fs.readFile(`${templatesPath}/doc.html`, utf8enc);
 

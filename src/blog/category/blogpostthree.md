@@ -1,7 +1,8 @@
 ---
 title: "Blog Post Three"
 subtitle: "What it do?"
-date: "2023-06-30"
+description: "Third post"
+date: "2023-07-30"
 ---
 
 ## Hello
