@@ -64,40 +64,198 @@
         <li class="timeline-item">
           <div class="timeline-header">
             <div class="timeline-metadata">July 2022 – Present</div>
-            <h3 class="timeline-title">GoMedia Services Ltd.</h3>
-            <h4 class="timeline-subtitle">
-              Lead Engineer & Full Stack Developer
-            </h4>
+            <h3 class="timeline-title">Lead Engineer & Full Stack Developer</h3>
+            <h4 class="timeline-subtitle">GoMedia Services Ltd.</h4>
           </div>
           <div class="timeline-body">work is a lifestyle choice</div>
         </li>
         <li class="timeline-item">
           <div class="timeline-header">
             <div class="timeline-metadata">Apr 2022 – July 2022</div>
-            <h3 class="timeline-title">causaLens</h3>
-            <h4 class="timeline-subtitle">
+            <h3 class="timeline-title">
               DecisionOS Lead Engineer & Full Stack Developer
-            </h4>
+            </h3>
+            <h4 class="timeline-subtitle">causaLens</h4>
           </div>
           <div class="timeline-body">work is a lifestyle choice</div>
         </li>
         <li class="timeline-item">
           <div class="timeline-header">
             <div class="timeline-metadata">Mar 2021 – Apr 2022</div>
-            <h3 class="timeline-title">GoMedia Services Ltd.</h3>
-            <h4 class="timeline-subtitle">
-              Lead Engineer & Full Stack Developer
-            </h4>
+            <h3 class="timeline-title">Lead Engineer & Full Stack Developer</h3>
+            <h4 class="timeline-subtitle">GoMedia Services Ltd.</h4>
           </div>
           <div class="timeline-body">work is a lifestyle choice</div>
         </li>
         <li class="timeline-item">
           <div class="timeline-header">
             <div class="timeline-metadata">Aug 2017 – Jan 2021</div>
-            <h3 class="timeline-title">Symphony Ventures Ltd.</h3>
-            <h4 class="timeline-subtitle">Technical Architect</h4>
+            <h3 class="timeline-title">Technical Architect</h3>
+            <h4 class="timeline-subtitle">Symphony Ventures Ltd.</h4>
           </div>
-          <div class="timeline-body">work is a lifestyle choice</div>
+          <div class="timeline-body">
+            <p>
+              When I joined, Symphony Ventures Ltd. (then SYKES Digital
+              Services, then Sitel, now Foundever) was a business focused on
+              delivering Robotic Process Automation (RPA) solutions as a service
+              to a number of clients in various sectors.
+            </p>
+            <h5>Software Development</h5>
+            <p>
+              Post onboarding, I was responsible (with one other person) in the
+              development of Symphony's first application. This was a Windows
+              Desktop (WPF application) which helped implementation consultants
+              with the use of RPA tools. After the success of this project, I
+              was tasked to build subsequent applications for Symphony's
+              internal usage. These include:
+            </p>
+            <br />
+            <ul class="funky-list spacey">
+              <li>
+                <span
+                  >A Desktop Application to help Implementation Consultants:
+                </span>
+                I can not discuss particulars about this one :). For this
+                project, we used C# with a strong lean towards object oriented
+                programming and lots of serialisation logic for generating
+                structured XML. (I'm not a fan of C# or Object Oriented
+                Programming)
+              </li>
+              <li>
+                <span>An 'App/Artefact' Store Framework:</span>
+                Symphony had multiple implementation consulting teams
+                responsible for technical develivery of solutions using a few
+                different tools. In order for these teams to ensure standards
+                are met & code is actively reused, I was tasked with building an
+                Artefact Storage solution.
+                <br />
+                This solution allowed users to: View & query a list of reusable
+                artefacts, rate artefacts & leave comments, raise bugs & submit
+                new artefacts for review (which sent emails with the artefact
+                attached).
+                <br />
+                The solution also had an admin role which allowed administrators
+                to upload artefacts & view metrics on download numbers (in
+                addition to the above).
+                <br />
+                <em>Tech Stack:</em> This project was written in TypeScript
+                (full stack), with a REST backend, blob storage, NoSQL DB & Vue
+                Frontend. The solution also allowed for easy deployments for
+                each of the different teams.
+              </li>
+              <li>
+                <span>Estimation & Project Planning Solution:</span>
+                Symphony wanted to streamline the time taken to generate quotes
+                for completing projects. This led me to develop and application
+                which allowed users to generate project estimates (in days) to
+                automate a process based on a process map. The estimates were
+                broken down into days for different phases of an implementation,
+                this allowed me to also automate the project planning of a
+                multi-project estimation, given the number of reasouces.
+                <br />
+                Using this tool, users were able to quickly generate accurate
+                estimations, create project plans, and then quote the total
+                number of days and estimated end date of a project.
+                <br />
+                This solution also had role based access and allowed more senior
+                staff to see the estimated cost of the quote.
+                <br />
+                <em>Tech Stack:</em> This project was written in TypeScript
+                (full stack), with a GraphQL backend, blob storage & Vue
+                Frontend.
+              </li>
+              <li>
+                <span>Standards Checking Tools:</span>
+                To help automate quality checking of implementation solutions
+                for Blue Prism. I created a tool which parsed Blue Prism
+                projects (a collection of XML files), created a Directed Graph
+                and then performed various checks. Similar to sonar, the
+                solution provided information in various categories: bugs,
+                linting issues, company standards failures and error handling
+                checks. This tool also did some graphical calculations to
+                determine certain standards where checked (checking
+                intersections between objects based on coordinates & creating
+                special edges in the graph to denote the connection).
+                <br />
+                <em>Tech Stack:</em> This project was written in TypeScript
+                (full stack), with a REST backend & Vue Frontend.
+              </li>
+              <li>
+                <span>Integrations:</span>
+                I also created integrations with other services on a few
+                occasions.
+                <br />
+                Firstly, I created an orchestrated process which synced time our
+                support team spent on tickets in JIRA to our project management
+                tool, MavenLink. This saved our support from having to record
+                their time twice & lead to more accurate reporting. This
+                solution used Jira webhooks to add timesheet changes to a queue,
+                which was then picked up by the process to create/update/delete
+                the time entry in MavenLink.
+                <br />
+                <em>Tech Stack:</em> This project was written in TypeScript
+                using a task runner framework to pull from a queue system.
+                <br />
+                Secondly, I created an dashboard for our Solutions team to view
+                a select set of data from SalesForce. This was a cost effictive
+                & secure way of providing certain users access to a partial set
+                of data from SalesForce. The solution involved syncing data from
+                SalesForce to a database, creating a backend to allow flexible
+                querying of large data & enabling users to update only an
+                allowed list of fields.
+                <br />
+                <em>Tech Stack:</em> This project was written in TypeScript,
+                with a task runner for syncing data & GraphQL backend for
+                querying. The frontend was written in Vue.
+              </li>
+              <li>
+                <span>Others:</span>
+                In addition to the above, I also developed a few other solutions
+                in a variad of languages & frameworks including C#, F#, Svelte &
+                React. I enjoyed my time with F#, Svelte & React (sorry C#). The
+                main reason for Vue's high utilisation at Symphony was the use
+                of
+                <a href="https://bootstrap-vue.org/" target="_blank"
+                  >BootstrapVue</a
+                >, which at the time, was the most complete & free
+                implementation of baseline components for Bootstrap (the company
+                application theme was based on Bootstrap).
+              </li>
+            </ul>
+            <h5>Training</h5>
+            <p>
+              After 6 months, I was responsible for onboarding & training new
+              Associates. During my time at Symphony I supported technical
+              training for over 20 employees, both in person and remotely for
+              staff abroad (US, Poland). This involved creation of new training
+              material, creating standardised feedback forms, creating &
+              presenting lessons, one-to-one development meetings & hosting an
+              end of training competition.
+            </p>
+            <br />
+            <p>
+              From a technical point of view, most of the training I supplied
+              was for a tool called
+              <a href="https://www.blueprism.com/" target="_blank">Blue Prism</a
+              >, this is not so relevant to my aims currently, however I did
+              have to teach the principles of Object Oriented Programming (Blue
+              Prism is Object-ly oriented).
+            </p>
+            <p>
+              However, from a project point of view, I taught staff about the
+              software development lifecycle, understanding business processes &
+              process mapping and software pre-sales engagement & estimation.
+              This has been a valuable skill to carry forward, especially as I
+              moved on to line-manage staff past the onboarding phase.
+            </p>
+            <br />
+            <p>
+              Further on into my time at Symphony, I also taught software
+              development to multple staff (whom has little experience prior).
+              This included learning basics in backend & frontend development,
+              react, vue, javascript, typescript, C# & GraphQL.
+            </p>
+          </div>
         </li>
       </ul>
     </div>
@@ -109,20 +267,65 @@
         <li class="timeline-item">
           <div class="timeline-header">
             <div class="timeline-metadata">2014 – 2017</div>
-            <h3 class="timeline-title">University of Warwick</h3>
-            <h4 class="timeline-subtitle">
-              1st Class BScHons Discrete Mathematics
-            </h4>
+            <h3 class="timeline-title">
+              Discrete Mathematics - 1st Class BScHons
+            </h3>
+            <h4 class="timeline-subtitle">University of Warwick</h4>
           </div>
-          <div class="timeline-body">Did a lot of Java</div>
+          <div class="timeline-body">
+            <p>
+              <a
+                href="https://warwick.ac.uk/study/undergraduate/courses/discretemaths/"
+                target="_blank"
+              >
+                Discrete Mathematics
+              </a>
+              is a joint Computer Science & Mathematics degree focused on
+              algorithms and analysis.
+            </p>
+            <br />
+            <p>
+              During my time at Warick, I chose to focus on subjects that most
+              interested me, taking foward subjects in Algebra, Algebraic Graph
+              Theory, Calculus & Analysis, Number & Set Theory, Data Structures
+              and Automata, through to my final year.
+            </p>
+            <br />
+            <p>
+              My dissertation report is on "DPDA Equalivance", which aimed to
+              explain a proof of Petr Janˇcar’s regarding said equivalence. The
+              project involved both logical reasoning (explaining theorems &
+              writing proofs) & a coding project to model & determine
+              equivalence of DPDAs
+            </p>
+          </div>
         </li>
         <li class="timeline-item">
           <div class="timeline-header">
             <div class="timeline-metadata">2012 – 2014</div>
-            <h3 class="timeline-title">Dr. Challoner's Grammar School</h3>
-            <h4 class="timeline-subtitle">A-Levels</h4>
+            <h3 class="timeline-title">A-Levels</h3>
+            <h4 class="timeline-subtitle">Dr. Challoner's Grammar School</h4>
           </div>
-          <div class="timeline-body">A* Middle-Classian Culture Studies</div>
+          <div class="timeline-body">
+            <ul class="funky-list">
+              <li>
+                <span> A* </span>
+                <span> Mathematics </span>
+              </li>
+              <li>
+                <span> A </span>
+                <span> Further Mathematics </span>
+              </li>
+              <li>
+                <span> A </span>
+                <span> Physics </span>
+              </li>
+              <li>
+                <span> A </span>
+                <span> Chemistry </span>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

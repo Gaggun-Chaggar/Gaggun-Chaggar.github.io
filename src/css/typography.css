@@ -45,6 +45,7 @@ h3 {
 
 h4 {
   font-size: 14px;
+  opacity: 0.75;
   margin-bottom: calc(var(--text-margin) * 2);
 }
 

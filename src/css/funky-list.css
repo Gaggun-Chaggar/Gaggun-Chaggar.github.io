@@ -1,0 +1,12 @@
+/** I didn't know what to call it */
+.funky-list > li > span:first-child {
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--colour-bold);
+  min-width: 20px;
+  display: inline-block;
+}
+
+.funky-list.spacey > li {
+  margin-bottom: var(--grid-px);
+}
