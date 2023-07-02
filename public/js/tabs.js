@@ -28,6 +28,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
     tabPanels[index].classList.remove("hidden");
     setTimeout(() => {
       tabPanels[index].classList.remove("hidden-fade-in");
+      window.scrollTo({ top: 0 });
     }, 1);
 
     activeTabIndex = index;
