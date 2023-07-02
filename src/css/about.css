@@ -15,6 +15,19 @@ figure.memoji {
   height: 0;
   padding-top: 100%;
   position: relative;
+  border-radius: 0px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    170deg,
+    var(--colour-secondary) 0%,
+    var(--colour-secondary) 12%,
+    var(--colour-primary-dark) 12%,
+    var(--colour-primary-dark) 50%,
+    var(--colour-primary-dark) 88%,
+    var(--colour-secondary) 88%,
+    var(--colour-secondary) 100%
+  );
+  border-image-width: 20px;
 }
 
 .memoji > div > img {
