@@ -1,5 +1,7 @@
 :root {
-  font-family: "Noto Serif";
+  --serif: "Noto Serif", garamond, georgia, serif;
+  --sans: "Noto Sans", helvetica, arial, sans-serif;
+  font-family: var(--serif);
 
   color: var(--colour-text);
   --text-margin: 2px;
@@ -22,7 +24,7 @@ h1 {
   font-weight: 700;
   font-size: 32px;
   margin-bottom: calc(var(--text-margin) * 4);
-  font-family: "Noto Sans";
+  font-family: var(--sans);
 }
 
 h2,
@@ -30,14 +32,14 @@ h2,
   font-weight: 600;
   font-size: 22px;
   margin-bottom: calc(var(--text-margin) * 3);
-  font-family: "Noto Sans";
+  font-family: var(--sans);
 }
 
 h3 {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: calc(var(--text-margin) * 2);
-  font-family: "Noto Sans";
+  font-family: var(--sans);
 }
 
 h4 {
@@ -94,7 +96,7 @@ figcaption {
 a,
 a:visited {
   all: unset;
-  font-family: "Noto Sans";
+  font-family: var(--sans);
   cursor: pointer;
   transition: color var(--transition);
   color: var(--colour-secondary);
