@@ -78,3 +78,8 @@
 .fa-linkedin:before {
   content: "\f08c";
 }
+
+.fa-external-link-alt::before {
+  content: "\f35d";
+  font-size: 12px;
+}

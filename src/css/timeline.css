@@ -38,12 +38,12 @@
 }
 
 .timeline-title:after {
-  --radius: 4px;
+  --half-width: 4px;
   content: "";
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  left: calc(-2 * var(--grid-px) - var(--radius) - 1px);
-  top: calc(50% - var(--radius) - 1px);
+  width: calc(2 * var(--half-width));
+  height: calc(2 * var(--half-width));
+  left: calc(-2 * var(--grid-px) - var(--half-width) - 1px);
+  top: calc(50% - var(--half-width) - 1px);
   bottom: 0;
   position: absolute;
   background-color: var(--colour-primary);

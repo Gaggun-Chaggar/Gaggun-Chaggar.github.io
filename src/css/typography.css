@@ -102,6 +102,7 @@ a:visited {
   cursor: pointer;
   transition: color var(--transition);
   color: var(--colour-secondary);
+  display: inline-block;
 }
 
 a:active,
