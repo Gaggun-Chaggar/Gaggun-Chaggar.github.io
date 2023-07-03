@@ -130,7 +130,4 @@ dist
 .pnp.*
 .DS_Store
 /src/css/min.css
-/public/**/*.html
-/public/**.html
-/public/js/*
-/public/css/*
+public/*
