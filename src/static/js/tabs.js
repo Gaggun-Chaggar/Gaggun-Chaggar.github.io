@@ -38,11 +38,13 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
     }
 
     const setTrackerPosition = () => {
+      const tabMidpoint = tabs[index].offsetLeft + tabs[index].offsetWidth / 2;
+      if (tabMidpoint === 0) {
+        return;
+      }
       tabTracker.style.setProperty(
         "--offset",
-        `calc(${
-          tabs[index].offsetLeft + tabs[index].offsetWidth / 2
-        }px - var(--radius))`
+        `calc(${tabMidpoint}px - var(--radius))`
       );
     };
 
