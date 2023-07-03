@@ -7,16 +7,18 @@
   border: 1px solid var(--colour-dark);
   outline: 1px solid var(--colour-primary);
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 0px;
   box-shadow: 0px 0px 8px var(--colour-dark);
   z-index: 1000;
-  transition: transform 0.1s linear, visibility 0s, opacity var(--transition);
+  transition: transform 0.1s linear, visibility 0s, opacity var(--transition),
+    font-size var(--transition);
 }
 
 [role="tooltip"][data-show] {
   display: block;
   visibility: visible;
   opacity: 1;
+  font-size: 12px;
 }
 
 [data-popper-arrow] {
