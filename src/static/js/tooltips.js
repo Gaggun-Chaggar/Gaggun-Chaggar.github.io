@@ -35,8 +35,6 @@ anchorsWithBlankTarget.forEach((a, i) => {
   const srText = createOpensInNewWindowSRText();
   const tooltip = createTooltip(i);
 
-  const parentEl = a.parentElement;
-
   a.setAttribute("id", `anchor-${i}`);
   a.setAttribute("aria-describedby", tooltipId(i));
   a.appendChild(icon);
