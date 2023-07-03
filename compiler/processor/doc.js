@@ -6,7 +6,7 @@ const docTemplate = await fs.readFile(`${templatesPath}/doc.html`, utf8enc);
 
 /**
  *
- * @param {{title: string; description?: string; body: string; assets?: string}} view
+ * @param {{title: string; description?: string; body: string; assets?: string; preload?: string}} view
  * @returns
  */
 export const createFullTemplate = (view) => mustache.render(docTemplate, view);

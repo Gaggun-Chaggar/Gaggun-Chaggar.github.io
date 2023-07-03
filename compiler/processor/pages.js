@@ -17,9 +17,7 @@ export const processPages = async () => {
 
     const doc = createFullTemplate({
       body: fileData.body,
-      title: fileData.attributes.title,
-      description: fileData.attributes.description,
-      assets: fileData.attributes.assets,
+      ...fileData.attributes,
     });
 
     const filePath = "public/" + page.replace(pagesPath + "/", "");

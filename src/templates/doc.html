@@ -49,6 +49,12 @@
     <meta name="msapplication-TileColor" content="#FBFAF8" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#FBFAF8" />
+    <link rel="preload" href="/css/font-awesome.css" as="style" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+    <link rel="stylesheet" href="/css/min.css" />
+
+    {{ &preload }}
+
     <link
       rel="preload"
       href="/fonts/NotoSans/NotoSans[wght].ttf"
@@ -80,13 +86,9 @@
       crossorigin
     />
 
-    <link rel="preload" href="/css/font-awesome.css" as="style" />
     <link rel="preload" href="/js/popper.js" as="script" />
     <link rel="preload" href="/js/tooltips.js" as="script" />
     {{ &assets }}
-
-    <link rel="stylesheet" href="/css/font-awesome.css" />
-    <link rel="stylesheet" href="/css/min.css" />
   </head>
 
   <body class="bg-primary">
