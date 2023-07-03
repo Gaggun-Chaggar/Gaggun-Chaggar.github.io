@@ -8,7 +8,7 @@
     "compile": "node ./compiler/index.js",
     "css:min": "postcss --use postcss-import --use autoprefixer --use cssnano -o src/css/min.css src/css/main.css --no-map",
     "static:copy": "cp -R src/static/* public",
-    "build": "npm run css:min && npm run compile && npm run static:copy",
+    "build": "mkdir -p public && npm run css:min && npm run compile && npm run static:copy",
     "doit": "npm i && npm run build",
     "build:watch": "nodemon --exec npm run build --watch src --watch compiler -e js,md,html,css",
     "serve": "cd public && http-server -c-1",
