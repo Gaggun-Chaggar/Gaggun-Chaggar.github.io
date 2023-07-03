@@ -49,11 +49,13 @@ anchorsWithBlankTarget.forEach((a, i) => {
 
   const show = () => {
     tooltip.setAttribute("data-show", "");
+    tooltip.setAttribute("aria-hidden", "false");
     popper.update();
   };
 
   const hide = () => {
     tooltip.removeAttribute("data-show");
+    tooltip.setAttribute("aria-hidden", "true");
   };
 
   a.addEventListener("mouseenter", show);
