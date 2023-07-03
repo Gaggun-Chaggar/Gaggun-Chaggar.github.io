@@ -20,7 +20,7 @@
 }
 
 [data-popper-arrow] {
-  bottom: -5px;
+  bottom: -6px;
   height: 6px;
   width: 6px;
   transition: transform 0.1s linear;
