@@ -4,7 +4,8 @@
 const memoji = document.querySelector(".memoji > div");
 
 const animationLength = 300;
-const endDegree = 170;
+const endDegree = 135;
+const start = 45;
 
 let startTime, previousTimestamp, done;
 
@@ -15,22 +16,21 @@ const animateBorder = (timestamp) => {
 
   const elapsed = timestamp - startTime;
 
+  const deg = Math.min(
+    ((start + elapsed) * endDegree) / animationLength,
+    endDegree
+  );
+
   if (timestamp !== previousTimestamp) {
-    const deg = Math.min((elapsed / animationLength) * endDegree, endDegree);
     memoji.style.borderImageSource = `linear-gradient(${deg}deg, var(--grad-colours))`;
-    if (deg === 170) {
-      done = true;
-    }
   }
 
-  if (done) {
+  if (deg === endDegree) {
     return;
   }
 
-  if (elapsed < 300) {
-    previousTimestamp = timestamp;
-    window.requestAnimationFrame(animateBorder);
-  }
+  previousTimestamp = timestamp;
+  window.requestAnimationFrame(animateBorder);
 };
 
 window.requestAnimationFrame(animateBorder);
