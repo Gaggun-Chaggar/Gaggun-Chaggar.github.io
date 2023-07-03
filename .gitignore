@@ -132,3 +132,5 @@ dist
 /src/css/min.css
 /public/**/*.html
 /public/**.html
+/public/js/*
+/public/css/*
