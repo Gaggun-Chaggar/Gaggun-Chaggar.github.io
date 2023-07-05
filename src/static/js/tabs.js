@@ -42,10 +42,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
       if (tabMidpoint === 0) {
         return;
       }
-      tabTracker.style.setProperty(
-        "--offset",
-        `calc(${tabMidpoint}px - var(--radius))`
-      );
+      tabTracker.style.setProperty("--offset", `${tabMidpoint}px`);
     };
 
     // handle initial page load

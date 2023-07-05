@@ -61,31 +61,46 @@ a.tab:focus-visible {
 }
 
 .tab-tracker {
-  --radius: 6px;
-  --offset: 0px;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0%;
+  transition: left var(--transition);
+}
+
+.tab-tracker:before {
+  --width: 12px;
   position: absolute;
   transition: all var(--transition);
   background-color: var(--colour-secondary);
   border-radius: 2px;
   content: "";
-  height: calc(var(--radius) * 2);
-  width: calc(var(--radius) * 2);
-  left: 50%;
-  bottom: calc(-1 * (var(--radius) + 1px));
+  height: var(--width);
+  width: var(--width);
+  left: calc(50% - var(--width) / 2);
+  bottom: calc(-1 * (var(--width) / 2) + 1px);
   transform: rotate(45deg);
+  transition: all var(--transition);
 }
 
-.tab-tracker:empty::after {
+.tab-tracker:after {
+  --width: 36px;
+  --height: 2px;
   content: "";
   position: absolute;
   background-color: var(--colour-secondary);
   display: block;
-  height: 2px;
-  width: 36px;
-  top: calc(50% - 1px);
-  left: -12px;
+  height: var(--height);
+  bottom: 0;
+  width: var(--width);
+  left: calc(50% - var(--width) / 2);
   border-radius: 1px;
-  transform: rotate(-45deg);
+  transition: all var(--transition);
+}
+
+header.shrink .tab-tracker:empty::after {
+  --width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -98,6 +113,9 @@ a.tab:focus-visible {
   }
 
   .tab-tracker {
-    left: var(--offset);
+    --offset: 0px;
+    width: 6px;
+    left: calc(var(--offset));
+    visibility: var(--offset);
   }
 }
