@@ -10,7 +10,9 @@
 
 :root {
   --grid-px: 8px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 0.3s;
+  --transition: var(--transition-duration) var(--bezier);
 }
 
 @media (min-width: 768px) {

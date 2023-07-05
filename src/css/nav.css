@@ -81,7 +81,6 @@ a.tab:focus-visible {
   left: calc(50% - var(--width) / 2);
   bottom: calc(-1 * (var(--width) / 2) + 1px);
   transform: rotate(45deg);
-  transition: all var(--transition);
 }
 
 .tab-tracker:after {
@@ -96,7 +95,7 @@ a.tab:focus-visible {
   width: var(--width);
   left: calc(50% - var(--width) / 2);
   border-radius: 1px;
-  transition: all var(--transition);
+  transition: all calc(var(--transition-duration) * 2) var(--bezier);
 }
 
 header.shrink .tab-tracker:empty::after {
