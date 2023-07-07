@@ -98,8 +98,10 @@ a.tab:focus-visible {
   transition: all calc(var(--transition-duration) * 2) var(--bezier);
 }
 
-header.shrink .tab-tracker:empty::after {
-  --width: 100%;
+@media (max-width: 768px) {
+  header.shrink .tab-tracker:empty::after {
+    --width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
