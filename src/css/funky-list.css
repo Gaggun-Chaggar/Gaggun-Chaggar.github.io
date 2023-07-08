@@ -1,4 +1,10 @@
 /** I didn't know what to call it */
+.funky-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .funky-list > li > span:first-child {
   font-family: var(--sans);
   font-weight: 300;
