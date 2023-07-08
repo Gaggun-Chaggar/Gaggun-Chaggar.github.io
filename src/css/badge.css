@@ -2,10 +2,11 @@
   font-family: "Noto Sans";
   color: var(--colour-primary);
   background-color: var(--colour-secondary);
-  padding: calc(var(--grid-px) / 2);
+  padding: calc(var(--grid-px) / 2) var(--grid-px);
   border-radius: 2px;
   position: relative;
   display: inline-block;
   margin-right: calc(var(--grid-px) / 2);
   margin-bottom: calc(var(--grid-px) / 2);
+  font-size: 14px;
 }
