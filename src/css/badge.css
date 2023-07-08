@@ -1,0 +1,11 @@
+.badge {
+  font-family: "Noto Sans";
+  color: var(--colour-primary);
+  background-color: hsl(216, 40%, 32%);
+  padding: calc(var(--grid-px) / 2);
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  margin-right: calc(var(--grid-px) / 2);
+  margin-bottom: calc(var(--grid-px) / 2);
+}
