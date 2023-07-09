@@ -1,7 +1,7 @@
 .badge {
   font-family: "Noto Sans";
-  color: var(--colour-primary);
-  background-color: var(--colour-secondary);
+  color: var(--colour-secondary);
+  background-color: var(--colour-secondary-lightest);
   padding: calc(var(--grid-px) / 2) var(--grid-px);
   border-radius: 2px;
   position: relative;
