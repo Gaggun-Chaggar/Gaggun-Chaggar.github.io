@@ -1,0 +1,41 @@
+.tag {
+  --tag-hole-width: 6px;
+  font-family: "Noto Sans";
+  color: var(--colour-secondary);
+  background-color: var(--colour-secondary-lightest);
+  padding-top: calc(var(--grid-px) / 2);
+  padding-bottom: calc(var(--grid-px) / 2);
+  padding-right: calc(var(--grid-px) * 1.5);
+  padding-left: calc(var(--grid-px) + var(--tag-hole-width) * 1.41 * 2);
+  border-radius: 2px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  position: relative;
+  display: inline-block;
+  margin-right: calc(var(--grid-px) / 2);
+  margin-bottom: var(--grid-px);
+  font-size: 14px;
+  position: relative;
+}
+
+.tag::before {
+  position: absolute;
+  transition: all var(--transition);
+  background-color: var(--colour-primary);
+  border-radius: 1px;
+  border: 1px solid var(--colour-secondary);
+  content: "";
+  height: var(--tag-hole-width);
+  width: var(--tag-hole-width);
+  left: calc(var(--tag-hole-width) * 1.41);
+  bottom: calc(50% - (var(--tag-hole-width) + 3px) / 2);
+  transform: rotate(45deg);
+}
+
+@media (min-width: 768px) {
+  .tag {
+    padding-top: calc(var(--grid-px) / 2);
+    padding-bottom: calc(var(--grid-px) / 2);
+    padding-right: var(--grid-px);
+  }
+}

@@ -7,7 +7,7 @@
 @import url("./timeline.css");
 @import url("./funky-list.css");
 @import url("./tooltip.css");
-@import url("./badge.css");
+@import url("./tag.css");
 
 :root {
   --grid-px: 8px;
