@@ -2,7 +2,7 @@
   font-family: "Noto Sans";
   color: var(--colour-secondary);
   background-color: var(--colour-secondary-lightest);
-  padding: calc(var(--grid-px) / 2) var(--grid-px);
+  padding: calc(var(--grid-px) / 2) calc(var(--grid-px) * 1.5);
   border-radius: 2px;
   position: relative;
   display: inline-block;
@@ -26,4 +26,10 @@
   left: -3px;
   bottom: calc(50% - (var(--width) + 3px) / 2);
   transform: rotate(45deg);
+}
+
+@media (min-width: 768px) {
+  .badge {
+    padding: calc(var(--grid-px) / 2) var(--grid-px);
+  }
 }
