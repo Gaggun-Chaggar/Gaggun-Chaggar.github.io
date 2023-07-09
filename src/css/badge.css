@@ -9,4 +9,21 @@
   margin-right: calc(var(--grid-px) / 2);
   margin-bottom: var(--grid-px);
   font-size: 14px;
+  position: relative;
+}
+
+.badge::before {
+  --width: 4px;
+  position: absolute;
+  transition: all var(--transition);
+  background-color: var(--colour-primary);
+  border-radius: 2px;
+  border: 1px solid var(--colour-secondary);
+  outline: 2px solid var(--colour-primary);
+  content: "";
+  height: var(--width);
+  width: var(--width);
+  left: -3px;
+  bottom: calc(50% - (var(--width) + 3px) / 2);
+  transform: rotate(45deg);
 }
