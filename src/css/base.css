@@ -99,8 +99,12 @@ main {
 }
 
 @media (min-width: 768px) {
+  .header {
+    padding-bottom: var(--grid-px);
+  }
+
   main {
-    padding-top: calc(183px + 2 * var(--grid-px));
+    padding-top: 177px;
   }
 }
 
