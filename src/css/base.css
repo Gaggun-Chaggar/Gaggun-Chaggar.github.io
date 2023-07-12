@@ -75,6 +75,7 @@ body {
   z-index: 1;
   background-color: var(--colour-primary);
   border-bottom: 2px solid var(--colour-primary-dark);
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
