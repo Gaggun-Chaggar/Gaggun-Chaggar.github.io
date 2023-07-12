@@ -36,9 +36,12 @@ base0F  #d33682  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php 
 
 pre {
   padding: var(--grid-px);
-  border: 1px solid var(--colour-primary-dark);
-  border-radius: 2px;
+  border: 2px solid var(--colour-primary-dark);
+  border-radius: 4px;
   overflow-x: auto;
+  box-shadow: 8px 12px 48px -24px var(--colour-primary-dark);
+  margin-bottom: calc(2 * var(--grid-px));
+  margin-top: calc(2 * var(--grid-px));
 }
 pre code {
   display: block;
