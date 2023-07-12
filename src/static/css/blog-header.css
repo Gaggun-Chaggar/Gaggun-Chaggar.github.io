@@ -30,4 +30,5 @@ main.blog.content {
 .breadcrumb a:not(:last-child)::after {
   content: "/";
   margin-left: var(--grid-px);
+  color: var(--colour-primary-dark);
 }
