@@ -1,6 +1,7 @@
 import frontmatter from "front-matter";
 import { existsSync, promises as fs } from "fs";
 import { glob } from "glob";
+import hljs from "highlight.js";
 import markdownIt from "markdown-it";
 import mustache from "mustache";
 import path from "path";
@@ -9,7 +10,17 @@ import { templatesPath, utf8enc } from "./utils.js";
 
 const blogsPath = "src/blog";
 
-const mdIt = new markdownIt();
+const mdIt = new markdownIt({
+  highlight: (str, lang) => {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (__) {}
+    }
+
+    return ""; // use external default escaping
+  },
+});
 
 const blogFileNames = await glob(`${blogsPath}/**/*.md`);
 
