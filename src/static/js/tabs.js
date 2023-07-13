@@ -20,7 +20,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
   /**
    * @param {number} index
    */
-  const setTabActive = (index) => {
+  const activateTab = (index) => {
     tabs[index].setAttribute("aria-selected", "true");
     tabs[index].setAttribute("tabindex", "0");
     tabs[index].classList.add("active");
@@ -55,7 +55,7 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
   /**
    * @param {number} index
    */
-  const setTabInactive = (index) => {
+  const deactivateTab = (index) => {
     tabs[index].setAttribute("aria-selected", "false");
     tabs[index].setAttribute("tabindex", "-1");
     tabs[index].classList.remove("active");
@@ -68,15 +68,15 @@ const useSetTabState = (tabs, tabPanels, tabTracker) => {
    * @param {number} index
    */
   const setSelectedTab = (index) => {
-    setTabInactive(activeTabIndex);
-    setTabActive(index);
+    deactivateTab(activeTabIndex);
+    activateTab(index);
   };
 
   const createOnClickEvent = (index) => () => setSelectedTab(index);
 
   return {
-    setTabActive,
-    setTabInactive,
+    activateTab,
+    deactivateTab,
     createOnClickEvent,
   };
 };
@@ -161,7 +161,7 @@ const handleTabs = (tablist) => {
     return document.getElementById(panelId);
   });
 
-  const { setTabActive, setTabInactive, createOnClickEvent } = useSetTabState(
+  const { activateTab, deactivateTab, createOnClickEvent } = useSetTabState(
     tabs,
     tabPanels,
     tabTracker
@@ -178,13 +178,38 @@ const handleTabs = (tablist) => {
   });
 
   // set state
-  tabs.forEach((_, i) => setTabInactive(i));
+  tabs.forEach((_, i) => deactivateTab(i));
 
-  const route = document.location.hash;
-  const firstActiveTabIndex = [...tabs].findIndex(
-    (t) => t.getAttribute("href") === route
-  );
-  setTabActive(firstActiveTabIndex > -1 ? firstActiveTabIndex : 0);
+  /**
+   *
+   * @param {string} route
+   */
+  const activateTabFromRoute = (route) => {
+    const hashIndex = [...tabs].findIndex(
+      (t) => t.getAttribute("href") === route
+    );
+    activateTab(hashIndex > -1 ? hashIndex : 0);
+  };
+
+  /**
+   *
+   * @param {string} route
+   */
+  const deactivateTabFromRoute = (route) => {
+    const hashIndex = [...tabs].findIndex(
+      (t) => t.getAttribute("href") === route
+    );
+    deactivateTab(hashIndex > -1 ? hashIndex : 0);
+  };
+
+  window.addEventListener("hashchange", (evt) => {
+    const oldHash = new URL(evt.oldURL).hash;
+    if (oldHash) {
+      deactivateTabFromRoute(oldHash);
+    }
+    activateTabFromRoute(document.location.hash);
+  });
+  activateTabFromRoute(document.location.hash);
 };
 
 handleTabs(document.querySelector("nav"));
