@@ -2,6 +2,7 @@
   display: none;
   align-items: center;
   margin-top: var(--grid-px);
+  line-height: 1;
 }
 
 a.tab {
