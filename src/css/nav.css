@@ -42,13 +42,15 @@ a.tab:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .tabpanel[role="tabpanel"].hidden {
-    display: none;
-  }
+  @media screen {
+    .tabpanel[role="tabpanel"].hidden {
+      display: none;
+    }
 
-  .tabpanel[role="tabpanel"].hidden-fade-in {
-    visibility: hidden;
-    opacity: 0;
+    .tabpanel[role="tabpanel"].hidden-fade-in {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 }
 
@@ -106,18 +108,20 @@ a.tab:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .tab-heading {
-    display: none;
-  }
+  @media screen {
+    .tab-heading {
+      display: none;
+    }
 
-  .tabs {
-    display: flex;
-  }
+    .tabs {
+      display: flex;
+    }
 
-  .tab-tracker {
-    --offset: 0px;
-    width: 6px;
-    left: calc(var(--offset) - 6px);
-    visibility: var(--offset);
+    .tab-tracker {
+      --offset: 0px;
+      width: 6px;
+      left: calc(var(--offset) - 6px);
+      visibility: var(--offset);
+    }
   }
 }
