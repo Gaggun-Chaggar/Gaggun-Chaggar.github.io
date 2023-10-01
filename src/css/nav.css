@@ -120,7 +120,7 @@ a.tab:focus-visible {
     .tab-tracker {
       --offset: 0px;
       width: 6px;
-      left: calc(var(--offset) - 6px);
+      left: calc(var(--offset) - 4px);
       visibility: var(--offset);
     }
   }
