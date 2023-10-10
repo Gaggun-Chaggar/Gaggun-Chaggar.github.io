@@ -3,12 +3,6 @@
   gap: var(--grid-px);
 }
 
-@media print {
-  #about {
-    display: none;
-  }
-}
-
 figure.memoji {
   width: 100%;
   margin: 0;

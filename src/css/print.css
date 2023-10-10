@@ -1,0 +1,56 @@
+@media print {
+  * {
+    line-height: 1.2;
+  }
+
+  @page {
+    margin-top: 12mm;
+    margin-bottom: 12mm;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  :root {
+    --colour-primary: white;
+  }
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 12px;
+    background-color: white;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    padding-top: calc(var(--grid-px) * 2);
+    padding-bottom: calc(var(--grid-px) * 2);
+  }
+
+  main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .content {
+    max-width: unset;
+    width: unset;
+  }
+
+  #about {
+    display: none;
+  }
+
+  .blog-posts {
+    display: none;
+  }
+
+  .fas.fa-external-link-alt {
+    display: none;
+  }
+}
