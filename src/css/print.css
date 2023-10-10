@@ -4,10 +4,11 @@
   }
 
   @page {
-    margin-top: 12mm;
-    margin-bottom: 12mm;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0mm;
+    margin-right: 0mm;
+    margin-top: 24mm;
+    margin-bottom: 24mm;
+    size: A3;
   }
   :root {
     --colour-primary: white;
@@ -16,8 +17,20 @@
     width: 100%;
     height: 100%;
     margin: 0px;
-    padding: 12px;
+    padding: 0px;
     background-color: white;
+  }
+
+  main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .content {
+    max-width: unset;
+    width: unset;
+    padding-left: 16mm;
+    padding-right: 16mm;
   }
 
   .footer {
@@ -30,16 +43,6 @@
     padding: 0;
     padding-top: calc(var(--grid-px) * 2);
     padding-bottom: calc(var(--grid-px) * 2);
-  }
-
-  main {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .content {
-    max-width: unset;
-    width: unset;
   }
 
   #about {
