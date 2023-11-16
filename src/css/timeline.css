@@ -64,3 +64,17 @@
   left: calc(-2 * var(--grid-px));
   border-radius: 2px;
 }
+
+.timeline.with-images .timeline-image {
+  width: 100px;
+  height: auto;
+}
+.timeline.with-images .timeline-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: calc(4 * var(--grid-px));
+  word-wrap: break-word;
+}

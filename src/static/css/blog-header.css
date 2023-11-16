@@ -1,4 +1,7 @@
 header.blog.header {
+  background-color: var(--colour-primary);
+  border-bottom: 2px solid var(--colour-primary-dark);
+  line-height: 1.2;
   position: inherit;
   display: flex;
   flex-direction: column;
@@ -16,6 +19,8 @@ header.blog .home {
 
 main.blog.content {
   padding-top: calc(2 * var(--grid-px));
+  padding-bottom: calc(2 * var(--grid-px));
+  flex: 1;
 }
 
 .breadcrumb {

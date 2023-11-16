@@ -22,11 +22,16 @@ p {
   display: block;
 }
 
-h1 {
+h1,
+.h1 {
   font-weight: 700;
   font-size: 32px;
   margin-bottom: calc(var(--text-margin) * 4);
   font-family: var(--sans);
+}
+
+h1.jumbo {
+  font-size: 48px;
 }
 
 h2,

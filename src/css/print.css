@@ -37,14 +37,6 @@
     display: none;
   }
 
-  .header {
-    position: relative;
-    width: 100%;
-    padding: 0;
-    padding-top: calc(var(--grid-px) * 2);
-    padding-bottom: calc(var(--grid-px) * 2);
-  }
-
   #about {
     display: none;
   }
@@ -55,5 +47,9 @@
 
   .fas.fa-external-link-alt {
     display: none;
+  }
+
+  #experience {
+    page-break-after: always;
   }
 }
