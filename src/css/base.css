@@ -103,7 +103,8 @@ body {
   background: radial-gradient(
     circle,
     var(--colour-dark-darker) 0%,
-    var(--colour-dark) 100%
+    var(--colour-dark-dark) 50%,
+    var(--colour-dark) 85%
   );
   color: var(--colour-primary);
   line-height: 1.2;
