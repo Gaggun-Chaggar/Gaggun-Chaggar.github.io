@@ -30,10 +30,6 @@ h1,
   font-family: var(--sans);
 }
 
-h1.jumbo {
-  font-size: 48px;
-}
-
 h2,
 .h2 {
   font-weight: 600;
@@ -74,6 +70,10 @@ figcaption {
   h1 {
     font-size: 32px;
     margin-bottom: calc(var(--text-margin) * 3);
+  }
+
+  h1.jumbo {
+    font-size: 48px;
   }
 
   h2 {

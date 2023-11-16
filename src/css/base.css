@@ -53,6 +53,11 @@ body {
   padding: calc(var(--grid-px) * 2);
 }
 
+.py-4 {
+  padding-top: calc(var(--grid-px) * 4);
+  padding-bottom: calc(var(--grid-px) * 4);
+}
+
 .px-2 {
   padding-right: calc(var(--grid-px) * 2);
   padding-left: calc(var(--grid-px) * 2);
@@ -102,8 +107,14 @@ body {
   );
   color: var(--colour-primary);
   line-height: 1.2;
-  min-height: calc(70vh - 72px);
+  height: fit-content;
   width: 100%;
+}
+
+@media (min-height: 768px) {
+  .jumbo-header {
+    min-height: 65vh;
+  }
 }
 
 .footer {
