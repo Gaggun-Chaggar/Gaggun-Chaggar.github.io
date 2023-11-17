@@ -1,3 +1,10 @@
-.blog-posts > p {
+.related-blog-posts > p {
   font-weight: bold;
+}
+
+/**
+TO-DO: I-1
+**/
+.related-blog-posts {
+  display: none;
 }
