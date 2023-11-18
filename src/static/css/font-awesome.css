@@ -84,6 +84,12 @@
   font-size: 12px;
 }
 
-.fa-map-pin::before {
-  content: "\f276";
+.fa-location-dot::before {
+  content: "\f3c5";
+  padding-left: 1.5px;
+  padding-right: 1.5px;
+}
+
+.fa-briefcase::before {
+  content: "\f0b1";
 }
