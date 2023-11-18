@@ -60,9 +60,17 @@ p {
   margin-bottom: calc(var(--text-margin) * 4);
 }
 
+.p-lg {
+  font-size: 16px;
+}
+
 figcaption {
   font-weight: 300;
   font-size: 12px;
+  font-style: italic;
+}
+
+.italic {
   font-style: italic;
 }
 
@@ -98,6 +106,10 @@ figcaption {
   p {
     font-size: 16px;
     margin-bottom: calc(var(--text-margin) * 4);
+  }
+
+  .p-lg {
+    font-size: 18px;
   }
 
   figcaption {

@@ -12,17 +12,20 @@
   margin: 0;
 }
 
-.references blockquote p {
+.references blockquote div {
   padding: calc(2 * var(--grid-px));
   background-color: var(--colour-secondary);
   border-radius: 6px;
   border: 2px solid transparent;
-  font-style: italic;
-  font-size: 16px;
   position: relative;
+  margin-bottom: 8px;
 }
 
-.references blockquote p:before {
+.references blockquote div *:last-child {
+  margin-bottom: 0;
+}
+
+.references blockquote div:before {
   --half-width: 4px;
   content: "";
   width: calc(2 * var(--half-width));
@@ -49,10 +52,6 @@
 }
 
 @media (min-width: 768px) {
-  .references blockquote p {
-    font-size: 18px;
-  }
-
   .references blockquote footer {
     font-size: 14px;
   }
