@@ -5,6 +5,7 @@
   --colour-secondary-dark: hsl(185, 80%, 17%);
   --colour-secondary-lightest: hsl(185, 24%, 87%);
   --colour-bold: hsl(4, 100%, 43%);
+  --colour-bold-light: hsl(4, 80%, 63%);
   --colour-text: hsl(33, 10%, 25%);
   --colour-dark: hsl(53, 8%, 15%);
   --colour-dark-dark: hsl(53, 8%, 10%);
@@ -37,4 +38,8 @@
 
 .fg-bold {
   color: var(--colour-bold);
+}
+
+.fg-bold-light {
+  color: var(--colour-bold-light);
 }
