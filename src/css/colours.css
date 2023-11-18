@@ -2,7 +2,9 @@
   --colour-primary: hsl(33, 30%, 96%);
   --colour-primary-dark: hsl(33, 42%, 78%);
   --colour-secondary: hsl(185, 94%, 27%);
-  --colour-secondary-dark: hsl(185, 80%, 17%);
+  --colour-secondary-dark: hsl(185, 80%, 20%);
+  --colour-secondary-darker: hsl(185, 80%, 17%);
+  --colour-secondary-darkest: hsl(185, 80%, 15%);
   --colour-secondary-lightest: hsl(185, 24%, 87%);
   --colour-bold: hsl(4, 100%, 43%);
   --colour-bold-light: hsl(4, 80%, 63%);

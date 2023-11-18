@@ -15,7 +15,7 @@
 .references blockquote div {
   padding: calc(2 * var(--grid-px));
   background-color: var(--colour-secondary);
-  border-radius: 6px;
+  border-radius: 2px;
   border: 2px solid transparent;
   position: relative;
   margin-bottom: 8px;
