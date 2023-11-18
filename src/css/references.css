@@ -1,0 +1,59 @@
+.references {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.references li:not(:last-child) {
+  margin-bottom: calc(4 * var(--grid-px));
+}
+
+.references blockquote {
+  margin: 0;
+}
+
+.references blockquote p {
+  padding: calc(2 * var(--grid-px));
+  background-color: var(--colour-secondary);
+  border-radius: 6px;
+  border: 2px solid var(--colour-primary);
+  font-style: italic;
+  font-size: 16px;
+  position: relative;
+}
+
+.references blockquote p:before {
+  --half-width: 4px;
+  content: "";
+  width: calc(2 * var(--half-width));
+  height: calc(2 * var(--half-width));
+  right: calc(2 * var(--grid-px) + var(--half-width) + 1px);
+  bottom: calc(-2 * var(--half-width) + 2px);
+  position: absolute;
+  background-color: var(--colour-secondary);
+  border-radius: 2px;
+  border: 2px solid transparent;
+  border-right: 2px solid var(--colour-primary);
+  border-bottom: 2px solid var(--colour-primary);
+  transform: rotate(45deg);
+}
+
+.references blockquote footer {
+  margin-right: var(--grid-px);
+  text-align: end;
+  font-weight: 300;
+}
+
+.references blockquote footer {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .references blockquote p {
+    font-size: 18px;
+  }
+
+  .references blockquote footer {
+    font-size: 14px;
+  }
+}

@@ -13,6 +13,10 @@
   line-height: 1.8;
 }
 
+.icon-left > svg {
+  margin-right: var(--grid-px);
+}
+
 h1,
 h2,
 h3,

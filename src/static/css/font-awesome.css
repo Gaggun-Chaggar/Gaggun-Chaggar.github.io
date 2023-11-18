@@ -83,3 +83,7 @@
   content: "\f35d";
   font-size: 12px;
 }
+
+.fa-map-pin::before {
+  content: "\f276";
+}
