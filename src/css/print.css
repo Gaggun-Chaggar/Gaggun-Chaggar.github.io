@@ -1,4 +1,12 @@
+.print-only {
+  display: none;
+}
+
 @media print {
+  .print-only {
+    display: block;
+  }
+
   * {
     line-height: 1.2;
   }
@@ -6,16 +14,17 @@
   @page {
     margin-left: 0mm;
     margin-right: 0mm;
-    margin-top: 24mm;
-    margin-bottom: 24mm;
-    size: A3;
+    margin-top: 8mm;
+    margin-bottom: 8mm;
+    size: A4;
   }
   :root {
     --colour-primary: white;
   }
+
   html {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0px;
     padding: 0px;
     background-color: white;
@@ -26,6 +35,32 @@
     padding-bottom: 0;
   }
 
+  .jumbo-header {
+    min-height: fit-content;
+    max-height: fit-content;
+    background: var(--colour-primary);
+    color: var(--colour-dark);
+    justify-content: start;
+  }
+
+  .about-content {
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    align-items: baseline;
+    text-align: left;
+  }
+  .about-content * {
+    line-height: 1.4;
+  }
+  .about-content figure {
+    display: none;
+  }
+
+  .about-content > div {
+    padding-left: calc(2 * var(--grid-px));
+  }
+
   .content {
     max-width: unset;
     width: unset;
@@ -33,11 +68,11 @@
     padding-right: 16mm;
   }
 
-  .footer {
-    display: none;
+  .home-main > .bordered {
+    border-bottom: none;
   }
 
-  #about {
+  .footer {
     display: none;
   }
 
@@ -49,7 +84,39 @@
     display: none;
   }
 
-  #experience {
+  .references-wrap .content {
+    width: 100%;
+  }
+
+  .references-wrap {
+    background: var(--colour-primary);
+  }
+
+  .references-wrap .fg-primary {
+    color: var(--colour-dark);
+  }
+
+  .references-wrap h2.fg-primary {
+    color: var(--colour-secondary);
+  }
+
+  #references > .pt-2 {
+    padding-top: 0;
+  }
+
+  .references blockquote div {
+    background-color: transparent;
+    border-color: var(--colour-secondary);
+  }
+
+  .references blockquote div:before {
+    background-color: var(--colour-primary);
+    border-color: var(--colour-secondary);
+  }
+  #gomedia-2 {
     page-break-after: always;
+  }
+  .references-wrap {
+    height: fit-content;
   }
 }

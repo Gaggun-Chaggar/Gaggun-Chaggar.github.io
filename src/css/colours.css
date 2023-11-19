@@ -22,8 +22,13 @@
   background-color: var(--colour-secondary);
 }
 
-.bg-secondary-dark {
-  background-color: var(--colour-secondary-dark);
+.bg-secondary-darkest-to-dark {
+  background: radial-gradient(
+    circle,
+    var(--colour-secondary-dark) 0%,
+    var(--colour-secondary-darker) 50%,
+    var(--colour-secondary-darkest) 85%
+  );
 }
 
 .bg-bold {

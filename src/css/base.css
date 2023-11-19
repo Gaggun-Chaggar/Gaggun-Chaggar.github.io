@@ -154,3 +154,7 @@ body {
 .footer a:hover {
   color: var(--colour-bold);
 }
+
+.references-wrap {
+  width: 100%;
+}

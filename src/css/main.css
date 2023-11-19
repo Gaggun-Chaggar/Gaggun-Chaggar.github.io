@@ -8,8 +8,8 @@
 @import url("./tooltip.css");
 @import url("./tag.css");
 @import url("./blog-posts.css");
-@import url("./print.css");
 @import url("./references.css");
+@import url("./print.css");
 
 :root {
   --grid-px: 8px;

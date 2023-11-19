@@ -93,3 +93,7 @@
 .fa-briefcase::before {
   content: "\f0b1";
 }
+
+.fa-globe::before {
+  content: "\f0ac";
+}
