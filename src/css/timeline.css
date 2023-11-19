@@ -22,7 +22,7 @@
 .timeline:before {
   content: "";
   width: 2px;
-  left: 0;
+  left: 1.5px;
   top: 0;
   bottom: 0;
   position: absolute;
@@ -42,7 +42,7 @@
   content: "";
   width: calc(2 * var(--half-width));
   height: calc(2 * var(--half-width));
-  left: calc(-2 * var(--grid-px) - var(--half-width) - 1px);
+  left: calc(-2 * var(--grid-px) - var(--half-width) + 0.5px);
   top: calc(50% - var(--half-width) - 1px);
   bottom: 0;
   position: absolute;
@@ -61,7 +61,7 @@
   height: var(--height);
   width: 2px;
   top: calc(50% - var(--height) / 2 + 1px);
-  left: calc(-2 * var(--grid-px));
+  left: calc(-2 * var(--grid-px) + 1.5px);
   border-radius: 2px;
 }
 
