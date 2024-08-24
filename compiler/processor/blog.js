@@ -125,7 +125,7 @@ export const processBlog = async () => {
       article: html,
     });
 
-    await writeFile(newFileName, blogPost);
+    writeFile(newFileName, blogPost);
 
     blogPosts.push({
       ...attributes,

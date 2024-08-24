@@ -21,6 +21,6 @@ export const processPages = async () => {
     });
 
     const filePath = "public/" + page.replace(pagesPath + "/", "");
-    await fs.writeFile(filePath, doc, utf8enc);
+    fs.writeFile(filePath, doc, utf8enc);
   }
 };

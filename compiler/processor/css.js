@@ -16,6 +16,6 @@ export const processCSS = async () => {
       `<style>${css}</style>`
     );
 
-    await fs.writeFile(fileName, newHtml, utf8enc);
+    fs.writeFile(fileName, newHtml, utf8enc);
   }
 };
