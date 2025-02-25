@@ -14,7 +14,7 @@ assets: >
 ---
 
 <header class="py-4 jumbo-header center" id="about">
-  <div class="center about-content content">
+  <div class="center content about-content">
     <figure class="center flex-col flex memoji">
       <img
         width="100%"
@@ -24,37 +24,39 @@ assets: >
       />
       <figcaption>fig 1. Me!</figcaption>
     </figure>
-    <div>
+    <div class="about-details">
       <h1 class="jumbo">Gaggun Chaggar</h1>
-      <p>
-        <i
-          role="img"
-          aria-label="Occupation"
-          class="fas fa-briefcase mr-half fg-bold-light"
-        ></i>
-        Full-Stack Software Developer & Manager
-      </p>
-      <p>
-        <i
-          role="img"
-          aria-label="Location"
-          class="fas fa-location-dot mr-half fg-bold-light"
-        ></i>
-        <small>London, UK</small>
-      </p>
-      <p class="print-only">
-        <i
-          role="img"
-          aria-label="Website Link"
-          class="fas fa-globe mr-half fg-bold-light"
-        ></i>
-        <small
-          >Extracted from
-          <a href="https://gaggun-chaggar.github.io" target="_blank"
-            >gaggun-chaggar.github.io</a
-          ></small
-        >
-      </p>
+      <div>
+        <p>
+          <i
+            role="img"
+            aria-label="Occupation"
+            class="fas fa-briefcase mr-half fg-bold-light"
+          ></i>
+          Full-Stack Lead Software Engineer
+        </p>
+        <p>
+          <i
+            role="img"
+            aria-label="Location"
+            class="fas fa-location-dot mr-half fg-bold-light"
+          ></i>
+          <small>London, UK</small>
+        </p>
+        <p class="print-only">
+          <i
+            role="img"
+            aria-label="Website Link"
+            class="fas fa-globe mr-half fg-bold-light"
+          ></i>
+          <small
+            >Extracted from
+            <a href="https://gaggun-chaggar.github.io" target="_blank"
+              >gaggun-chaggar.github.io</a
+            ></small
+          >
+        </p>
+      </div>
     </div>
   </div>
 </header>
@@ -88,69 +90,94 @@ assets: >
                 </p>
                 <ul class="funky-list spacey">
                   <li>
-                    <span>Line Management: </span> I line manage multiple
-                    backend and frontend engineers ranging from 2 years
-                    experience to 8+ years experience. I conduct bi-weekly
-                    1-2-1s, track goals, ensure each individual is enjoying
-                    their work & define growth avenues for each engineer.
-                  </li>
-
-                  <li>
-                    <span>Infrastructure: </span> With the Platform Engineering
-                    team, I work on the deployment and scaling of many of our
-                    services. As an engineer, this involves creating stateless
-                    systems, metrics, structured logging & designing
-                    horizontally scalable architecture. I have also worked on
-                    creating and deploying Helm charts to cloud hosted
-                    Kubernetes environments managed by the Platform Engineering
-                    team.
-                  </li>
-                  <li>
-                    <span>Product Development: </span> I have worked with
-                    non-technical teams (Design, Content Operations) to define
-                    roadmaps for multiple of GoMedia's systems. Creation of well
-                    defined product maps has helped my team & I deliver multiple
-                    key initiatives on & ahead of time, as well as implementing
-                    new innovations & ideas.
+                    <span>Software Development: </span>
+                    <ul class="disc-list">
+                      <li>
+                        I am hands on with development and I believe in leading
+                        by example. I work with GoLang & TypeScript daily.
+                      </li>
+                      <li>I pair program with my team.</li>
+                      <li>
+                        I conduct code reviews, either in person or via merge
+                        requests.
+                      </li>
+                      <li>
+                        I set the company standards for GoLang and TypeScript.
+                      </li>
+                      <li>
+                        I am responsible for solution architecture and
+                        documentation of most GoMedia projects.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <span>Software Development: </span> I am one of the most
-                    senior full-stack developers at GoMedia; as such, in
-                    addition to contributing to code bases: I complete code
-                    reviews for many repositiories across my team as well as
-                    other teams; I define code standards for GoLang and
-                    TypeScript within my team & I work with our VP of
-                    Engineering to adopt our testing strategy. I work on
-                    multiple GoLang services & multiple TypeScript + Vue 3
-                    frontends.
+                    <span>Talent & Team:</span>
+                    <ul class="disc-list">
+                      <li>I line manage a development team.</li>
+                      <li>I define job specs for engineering jobs.</li>
+                      <li>
+                        I design & conduct interviews for all engineering
+                        positions.
+                      </li>
+                      <li>
+                        I teach and upskill other engineering teams. e.g.
+                        Upskilling our manual QA team on Cypress and E2E
+                        automation.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Infrastructure: </span>
+                    <ul class="disc-list">
+                      <li>I design micro-services to run on Kubernetes.</li>
+                      <li>
+                        I work with the Platform Engineering team to set up
+                        automated deployments.
+                      </li>
+                      <li>
+                        I define standards to ensure our services are
+                        observable, highly available and horizontally scalable.
+                      </li>
+                      <li>
+                        I work with Docker & Gitlab CI to containerise and
+                        deploy our services.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Product Development: </span>
+                    <ul class="disc-list">
+                      <li>
+                        I work with our Design team to define the future of our
+                        products UI/UX.
+                      </li>
+                      <li>
+                        Lead design meetings with a wide group of staff to give
+                        everyone the opportunity to suggest new features.
+                      </li>
+                      <li>I define product roadmaps for multiple products</li>
+                    </ul>
                   </li>
                 </ul>
                 <p>
                   <span class="sr-only">Technologies</span>
-                  <span class="tag">Vue 3</span>
+                  <span class="tag">Vue.js</span>
                   <span class="tag">TypeScript</span>
                   <span class="tag">Java</span>
                   <span class="tag">GoLang</span>
                   <span class="tag">Postgres</span>
-                  <span class="tag">SQLite</span>
                   <span class="tag">REST</span>
                   <span class="tag">gRPC</span>
                   <span class="tag">Docker</span>
-                  <span class="tag">Jira Server</span>
-                  <span class="tag">Internationalisation</span>
+                  <span class="tag">Jira</span>
                   <span class="tag">GitLab</span>
                   <span class="tag">GitLab CI</span>
                   <span class="tag">Kubernetes</span>
                   <span class="tag">Helm</span>
-                  <span class="tag">CMS</span>
-                  <span class="tag">WYSIWYG</span>
                   <span class="tag">Cypress</span>
-                  <span class="tag">Sonar</span>
                   <span class="tag">Grafana</span>
                   <span class="tag">Prometheus</span>
                   <span class="tag">Kafka</span>
-                  <span class="tag">NGINX</span>
-                  <span class="tag">Asynchronus Tasks</span>
                 </p>
               </div>
             </li>
@@ -184,25 +211,38 @@ assets: >
                 </p>
                 <ul class="funky-list spacey">
                   <li>
-                    <span>Line Management:</span> I line managed multiple
-                    Junior/Mid-Level developers at causaLens. I worked with
-                    those I line managed to define KPIs for the next quarter,
-                    identify areas of improvement & taught new process
-                    management methods. I also collaborated with the VP of
-                    Engineering & other team leads to define skills, roles &
-                    grades across engineering.
+                    <span>Software Development:</span>
+                    <ul class="disc-list">
+                      <li>
+                        My team and I cleared all bugs raised for DecisionOS
+                      </li>
+                      <li>
+                        I designed an implemented a new user interface for
+                        Causal Graphs which can now be seen in the open sourced
+                        framework,
+                        <a href="https://dara.causalens.com/" target="_blank">
+                          Dara.
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <span>Product Development:</span> I worked with my team,
-                    Product Manager, VP of Engineering & CTO to create a product
-                    definition for DecisionOS and plan the roadmap for the next
-                    2 quarters.
-                  </li>
-                  <li>
-                    <span>Software Development:</span> Though my time at
-                    causaLens was short, I quickly learnt Python, defined &
-                    introduced new features to the product, & (with my team)
-                    cleared the bug board by the end of the quarter.
+                    <span>Management:</span>
+                    <ul class="disc-list">
+                      <li>I managed a team of Junior/Mid-level developers</li>
+                      <li>
+                        I worked with the VP of Engineering and other team leads
+                        to define the engineering skills matrix, roles & grades.
+                      </li>
+                      <li>
+                        I worked with the Product Manager to define and plan the
+                        DecisionOS roadmap.
+                      </li>
+                      <li>
+                        I introduced new Jira workflows, project plans and
+                        automations across engineering & research.
+                      </li>
+                    </ul>
                   </li>
                 </ul>
                 <p>
@@ -212,7 +252,7 @@ assets: >
                   <span class="tag">Docker</span>
                   <span class="tag">GitHub</span>
                   <span class="tag">GitHub Actions</span>
-                  <span class="tag">Jira Cloud</span>
+                  <span class="tag">Jira</span>
                   <span class="tag">D3</span>
                   <span class="tag">Cypress</span>
                 </p>
@@ -238,48 +278,64 @@ assets: >
                 </p>
                 <ul class="funky-list spacey">
                   <li>
-                    <span>Line Management:</span> I line managed a mixed team of
-                    Senior Backend Engineers (5+ years experience), Junior
-                    Frontend Engineers (2 years experience) & Senior QA
-                    Engineers (4+ years experience). This involved defining
-                    areas of growth & objectives for each individual, regular
-                    check-ins, feedback, performance reviews & cross skilling.
+                    <span>Software Development:</span>
+                    <ul class="disc-list">
+                      <li>
+                        I was responsible for GoMedia's primary product, GoView
+                        a multimedia entertainment platform.
+                      </li>
+                      <li>
+                        I worked with TypeScript and Vue.js daily, with GoLang
+                        and Java development as required.
+                      </li>
+                      <li>
+                        I introduced a component architecture to the frontend
+                        with storybook for isolated testing and accessibility
+                        validation.
+                      </li>
+                      <li>
+                        I streamlined the project delivery methods
+                        significantly, reducing build times from > 1 hour to < 8
+                        minutes.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <span>Services & Delivery:</span> In addition to technical
-                    leadership, I also provided product leadership & direction
-                    for GoMedia's core product. This involved defining our
-                    product offerring, creating a estimate model based on
-                    requested features, leading technical pre-sales, handling
-                    client facing projects & doing live product demos to select
-                    audiences.
-                  </li>
-                  <li>
-                    <span>Software Development:</span> My team & I were
-                    responsible for multiple services within the company,
-                    including the main product. Across these products, I was
-                    responsible for large contributions to TypeScript, Java &
-                    GoLang code bases across backend & frontend repositories, as
-                    well as completing code reviews for my team.
+                    <span>Management:</span>
+                    <ul class="disc-list">
+                      <li>
+                        I was responsible for line managing a mixed disciplinary
+                        team of Backend, Frontend, Manual QA and Automation QA
+                        Engineers.
+                      </li>
+                      <li>
+                        I worked with our Scrum Master and QA team to define our
+                        product offering and create standard sales packages for
+                        our product.
+                      </li>
+                      <li>
+                        I was often engaged with external clients to deliver
+                        custom features for white labelled entertainment
+                        portals. All projects were delivered on time and I
+                        received multiple bonuses for delivering ahead of
+                        schedule.
+                      </li>
+                    </ul>
                   </li>
                 </ul>
                 <p>
                   <span class="sr-only">Technologies</span>
-                  <span class="tag">Vue</span>
+                  <span class="tag">Vue.js</span>
                   <span class="tag">TypeScript</span>
                   <span class="tag">Java</span>
                   <span class="tag">GoLang</span>
                   <span class="tag">Postgres</span>
-                  <span class="tag">SQLite</span>
                   <span class="tag">REST</span>
                   <span class="tag">gRPC</span>
                   <span class="tag">Docker</span>
                   <span class="tag">Jenkins</span>
-                  <span class="tag">Jira Server</span>
-                  <span class="tag">Internationalisation</span>
+                  <span class="tag">Jira</span>
                   <span class="tag">BitBucket</span>
-                  <span class="tag">WCAG</span>
-                  <span class="tag">NGINX</span>
                 </p>
                 <div class="related-blog-posts">
                   <p>Related Blog Posts:</p>
@@ -325,40 +381,47 @@ assets: >
                 </p>
                 <ul class="funky-list spacey">
                   <li>
-                    <span>Training & Onboarding:</span> I produced training
-                    material, lesson plans & 3 month onboarding plans for all
-                    new associates across offices in the UK, India, US & Poland.
-                    This involed teaching Object Oriented Principles,
-                    operational process mapping, using
-                    <a href="https://www.blueprism.com/" target="_blank"
-                      >Blue Prism </a
-                    >, providing feedback in 1-2-1s & written feedback. I
-                    trained over 20 staff during my tenure.
+                    <span>Training & Onboarding:</span>
+                    <ul class="disc-list">
+                      <li>
+                        I was responsible for 3 month training and onboarding
+                        programs for all new enginerings joining in the UK,
+                        India, USA & Poland.
+                      </li>
+                      <li>
+                        I taught Object Oriented Principles, Process Mapping &
+                        Solution Design Documentation.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <span>Coding Standards:</span> For multiple different
-                    languages & tools, I created company guidelines for best
-                    practices. These best practices included high level process
-                    standards for RPA solutions as well as low level linting,
-                    formatting & block structure rules. I also developed
-                    automated standards checkers for tools like
-                    <a href="https://www.blueprism.com/" target="_blank"
-                      >Blue Prism
-                    </a>
-                    which read XML save files, creating directed graphs and used
-                    graph traversal algorithms to check multiple logical
-                    requirements for solutions (e.g. ensuring there are no
-                    uncaught errors).
+                    <span>Development Standards:</span>
+                    <ul class="disc-list">
+                      <li>
+                        I was responsible for the development standards across
+                        multiple languages and tools used in the company.
+                      </li>
+                      <li>
+                        I would perform code reviews for large projects and
+                        support solution designs across teams.
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <span>Software Development:</span> I developed many
-                    different applications for Symphony. These tools ranged from
-                    automated code standards checkers (with output like
-                    SonarQube), financial planning applications, process
-                    modelling applications, B2B integrations & more. Backends
-                    were developed in either C#, F# or TypeScript, with REST or
-                    GraphQL apis, frontends were developed in TypeScript with
-                    Vue or React.
+                    <span>Software Development:</span>
+                    <ul class="disc-list">
+                      <li>I worked mostly as a solo developer.</li>
+                      <li>
+                        I built many tools hosted on Azure and using Node.js and
+                        C#, primarily.
+                      </li>
+                      <li>
+                        Solutions built included: a project estimation tool that
+                        generated project plans; a sonar-list standards checker
+                        for automated code reviews; an internal app store with a
+                        submission and review flow.
+                      </li>
+                    </ul>
                   </li>
                 </ul>
                 <p>
@@ -373,7 +436,6 @@ assets: >
                   <span class="tag">NoSQL</span>
                   <span class="tag">REST</span>
                   <span class="tag">GraphQL</span>
-                  <span class="tag">Asynchronus Tasks</span>
                 </p>
                 <div class="related-blog-posts">
                   <p>Related Blog Posts:</p>
@@ -403,34 +465,9 @@ assets: >
               <div class="timeline-header">
                 <div class="timeline-metadata">2014 – 2017</div>
                 <h3 class="timeline-title">
-                  Discrete Mathematics - 1st Class BScHons
+                  1st Class BScHons - Discrete Mathematics
                 </h3>
                 <h4 class="timeline-subtitle">University of Warwick</h4>
-              </div>
-              <div class="timeline-body">
-                <p>
-                  <a
-                    href="https://warwick.ac.uk/study/undergraduate/courses/discretemaths/"
-                    target="_blank"
-                  >
-                    Discrete Mathematics
-                  </a>
-                  is a joint Computer Science & Mathematics degree focused on
-                  algorithms and analysis.
-                </p>
-                <p>
-                  During my time at Warwick, I took foward subjects in Algebra,
-                  Algebraic Graph Theory, Calculus & Analysis, Number & Set
-                  Theory, Data Structures and Automata, through to my final
-                  year.
-                </p>
-                <p>
-                  My dissertation report is on "DPDA Equalivance", which aimed
-                  to explain a proof of Petr Janˇcar’s regarding said
-                  equivalence. The project involved both logical reasoning
-                  (explaining theorems & writing proofs) & a coding project to
-                  model & determine equivalence of DPDAs.
-                </p>
               </div>
             </li>
             <li class="timeline-item">

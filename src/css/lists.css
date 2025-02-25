@@ -16,3 +16,7 @@
 .funky-list.spacey > li {
   margin-bottom: var(--grid-px);
 }
+
+.disc-list {
+  list-style-type: disc;
+}
