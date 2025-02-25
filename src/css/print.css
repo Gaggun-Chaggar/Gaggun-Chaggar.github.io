@@ -3,12 +3,8 @@
 }
 
 @media print {
-  .print-only {
-    display: block;
-  }
-
   * {
-    line-height: 1.2;
+    line-height: 1.6;
   }
 
   @page {
@@ -35,12 +31,23 @@
     padding-bottom: 0;
   }
 
+  .content {
+    max-width: unset;
+    width: unset;
+    padding-left: 16mm;
+    padding-right: 16mm;
+  }
+
   .jumbo-header {
     min-height: fit-content;
     max-height: fit-content;
     background: var(--colour-primary);
     color: var(--colour-dark);
     justify-content: start;
+  }
+
+  h1.jumbo {
+    font-size: 36px;
   }
 
   .about-content {
@@ -61,15 +68,32 @@
     padding-left: calc(2 * var(--grid-px));
   }
 
-  .content {
-    max-width: unset;
-    width: unset;
-    padding-left: 16mm;
-    padding-right: 16mm;
+  .about-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
   }
 
   .home-main > .bordered {
     border-bottom: none;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+  .timeline:before {
+    display: none;
+  }
+  .timeline-title:before {
+    display: none;
+  }
+  .timeline-title:after {
+    display: none;
+  }
+  .print-only {
+    display: block;
   }
 
   .footer {
@@ -113,7 +137,8 @@
     background-color: var(--colour-primary);
     border-color: var(--colour-secondary);
   }
-  #gomedia-2 {
+  #causalens,
+  #education {
     page-break-after: always;
   }
   .references-wrap {
