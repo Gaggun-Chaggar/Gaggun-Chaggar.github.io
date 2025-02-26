@@ -13,10 +13,17 @@
   display: inline-block;
 }
 
-.funky-list.spacey > li {
+.spacey > li {
   margin-bottom: var(--grid-px);
 }
 
 .disc-list {
   list-style-type: disc;
+}
+
+@media (min-width: 768px) {
+  .funky-list.with-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -3,8 +3,117 @@
 }
 
 @media print {
+  .content {
+    max-width: unset;
+    width: unset;
+    padding-left: 16mm;
+    padding-right: 16mm;
+  }
+
+  .jumbo-header {
+    min-height: fit-content;
+    max-height: fit-content;
+    background: var(--colour-primary);
+    color: var(--colour-dark);
+    justify-content: start;
+    padding-top: var(--grid-px);
+    padding-bottom: var(--grid-px);
+    border-bottom-width: var(--grid-px);
+  }
+
+  h1.jumbo {
+    font-size: 24px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    align-items: baseline;
+    text-align: left;
+  }
+  .about-content * {
+    line-height: 1.4;
+  }
+  .about-content figure {
+    display: none;
+  }
+
+  .about-content > div {
+    padding-left: calc(2 * var(--grid-px));
+  }
+
+  .about-details {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .home-main > .bordered {
+    border-bottom: none;
+    border-top-width: var(--grid-px);
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+  .no-print,
+  .timeline:before,
+  .timeline-title:before,
+  .timeline-title:after {
+    display: none;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .funky-list.with-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   * {
     line-height: 1.6;
+  }
+
+  .recommendations-wrap .content {
+    width: 100%;
+  }
+
+  .recommendations-wrap {
+    background: var(--colour-primary);
+  }
+
+  .recommendations-wrap .fg-primary {
+    color: var(--colour-dark);
+  }
+
+  .recommendations-wrap h2.fg-primary {
+    color: var(--colour-secondary);
+  }
+
+  #recommendations > .pt-2 {
+    padding-top: 0;
+  }
+
+  .recommendations blockquote div {
+    background-color: transparent;
+    border-color: var(--colour-secondary);
+  }
+
+  .recommendations blockquote div:before {
+    background-color: var(--colour-primary);
+    border-color: var(--colour-bold);
+  }
+
+  .recommendations-wrap {
+    height: fit-content;
+  }
+
+  .p-lg {
+    font-size: 16px;
   }
 
   @page {
@@ -29,119 +138,5 @@
   main {
     padding-top: 0;
     padding-bottom: 0;
-  }
-
-  .content {
-    max-width: unset;
-    width: unset;
-    padding-left: 16mm;
-    padding-right: 16mm;
-  }
-
-  .jumbo-header {
-    min-height: fit-content;
-    max-height: fit-content;
-    background: var(--colour-primary);
-    color: var(--colour-dark);
-    justify-content: start;
-  }
-
-  h1.jumbo {
-    font-size: 36px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    width: 100%;
-    justify-content: start;
-    align-items: baseline;
-    text-align: left;
-  }
-  .about-content * {
-    line-height: 1.4;
-  }
-  .about-content figure {
-    display: none;
-  }
-
-  .about-content > div {
-    padding-left: calc(2 * var(--grid-px));
-  }
-
-  .about-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-  }
-
-  .home-main > .bordered {
-    border-bottom: none;
-  }
-
-  .timeline {
-    padding-left: 0;
-  }
-  .timeline:before {
-    display: none;
-  }
-  .timeline-title:before {
-    display: none;
-  }
-  .timeline-title:after {
-    display: none;
-  }
-  .print-only {
-    display: block;
-  }
-
-  .footer {
-    display: none;
-  }
-
-  .blog-posts {
-    display: none;
-  }
-
-  .fas.fa-external-link-alt {
-    display: none;
-  }
-
-  .references-wrap .content {
-    width: 100%;
-  }
-
-  .references-wrap {
-    background: var(--colour-primary);
-  }
-
-  .references-wrap .fg-primary {
-    color: var(--colour-dark);
-  }
-
-  .references-wrap h2.fg-primary {
-    color: var(--colour-secondary);
-  }
-
-  #references > .pt-2 {
-    padding-top: 0;
-  }
-
-  .references blockquote div {
-    background-color: transparent;
-    border-color: var(--colour-secondary);
-  }
-
-  .references blockquote div:before {
-    background-color: var(--colour-primary);
-    border-color: var(--colour-secondary);
-  }
-  #causalens,
-  #education {
-    page-break-after: always;
-  }
-  .references-wrap {
-    height: fit-content;
   }
 }

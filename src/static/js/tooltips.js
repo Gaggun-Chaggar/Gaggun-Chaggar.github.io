@@ -2,7 +2,7 @@ const anchorsWithBlankTarget = document.querySelectorAll("a[target='_blank']");
 
 const createExternalLinkIcon = () => {
   const icon = document.createElement("i");
-  icon.classList = "fas fa-external-link-alt";
+  icon.classList = "fas fa-external-link-alt no-print";
   icon.setAttribute("aria-hidden", "true");
   return icon;
 };

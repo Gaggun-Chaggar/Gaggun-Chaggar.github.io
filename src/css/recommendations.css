@@ -1,18 +1,18 @@
-.references {
+.recommendations {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.references li:not(:last-child) {
+.recommendations li:not(:last-child) {
   margin-bottom: calc(4 * var(--grid-px));
 }
 
-.references blockquote {
+.recommendations blockquote {
   margin: 0;
 }
 
-.references blockquote div {
+.recommendations blockquote div {
   padding: calc(2 * var(--grid-px));
   background-color: var(--colour-secondary);
   border-radius: 2px;
@@ -21,11 +21,11 @@
   margin-bottom: 8px;
 }
 
-.references blockquote div *:last-child {
+.recommendations blockquote div *:last-child {
   margin-bottom: 0;
 }
 
-.references blockquote div:before {
+.recommendations blockquote div:before {
   --half-width: 4px;
   content: "";
   width: calc(2 * var(--half-width));
@@ -41,18 +41,18 @@
   transform: rotate(45deg);
 }
 
-.references blockquote footer {
+.recommendations blockquote footer {
   margin-right: var(--grid-px);
   text-align: end;
   font-weight: 300;
 }
 
-.references blockquote footer {
+.recommendations blockquote footer {
   font-size: 12px;
 }
 
 @media (min-width: 768px) {
-  .references blockquote footer {
+  .recommendations blockquote footer {
     font-size: 14px;
   }
 }

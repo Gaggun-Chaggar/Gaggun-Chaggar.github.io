@@ -13,6 +13,10 @@
   line-height: 1.8;
 }
 
+.sans-serif {
+  font-family: var(--sans);
+}
+
 .icon-left > svg {
   margin-right: var(--grid-px);
 }
@@ -120,7 +124,6 @@ figcaption {
 a,
 a:visited {
   all: unset;
-  font-family: var(--sans);
   cursor: pointer;
   transition: color var(--transition);
   color: var(--colour-secondary);
