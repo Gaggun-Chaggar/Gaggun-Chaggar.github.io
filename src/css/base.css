@@ -94,7 +94,7 @@ body {
 }
 
 .content {
-  max-width: 768px;
+  max-width: 990px;
   width: calc(100% - calc(var(--grid-px) * 4));
 }
 
