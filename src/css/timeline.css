@@ -66,8 +66,8 @@
 }
 
 .timeline.with-images .timeline-image {
-  width: 100px;
-  height: auto;
+  width: auto;
+  height: 30px;
 }
 .timeline.with-images .timeline-title {
   display: flex;

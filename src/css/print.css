@@ -116,10 +116,6 @@
     font-size: 16px;
   }
 
-  .page-break {
-    page-break-before: always;
-  }
-
   @page {
     margin-left: 0mm;
     margin-right: 0mm;
