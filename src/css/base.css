@@ -30,7 +30,7 @@ body {
 }
 
 .flex-justify-end {
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .flex-justify-space-between {
@@ -42,7 +42,7 @@ body {
 }
 
 .flex-align-end {
-  align-items: end;
+  align-items: flex-end;
 }
 
 .gap-2 {

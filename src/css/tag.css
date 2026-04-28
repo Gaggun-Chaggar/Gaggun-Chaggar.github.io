@@ -11,8 +11,8 @@
 .tag {
   --tag-hole-width: 6px;
   font-family: "Noto Sans";
-  color: var(--colour-secondary);
-  background-color: var(--colour-secondary-lightest);
+  color: var(--colour-tertiary);
+  background-color: var(--colour-tertiary-lightest);
   padding-top: calc(var(--grid-px) / 3);
   padding-bottom: calc(var(--grid-px) / 3);
   padding-right: calc(var(--grid-px) / 2);
@@ -30,7 +30,7 @@
   position: absolute;
   transition: all var(--transition);
   background-color: var(--colour-primary);
-  border: 1px solid var(--colour-secondary);
+  border: 1px solid var(--colour-tertiary);
   border-radius: 100%;
   content: "";
   height: var(--tag-hole-width);
@@ -47,10 +47,10 @@
 }
 
 .tag.colour-bold {
-  color: var(--colour-tertiary);
-  background-color: var(--colour-tertiary-lightest);
+  color: var(--colour-secondary);
+  background-color: var(--colour-secondary-lightest);
 }
 
 .tag.colour-bold::before {
-  border: 1px solid var(--colour-tertiary);
+  border: 1px solid var(--colour-secondary);
 }
