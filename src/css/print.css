@@ -12,7 +12,7 @@
   }
 
   ul {
-    padding-inline-start: 12pt;
+    padding-inline-start: 14pt;
   }
 
   .content {
@@ -21,13 +21,17 @@
     padding: 0mm 8mm;
   }
 
+  .experience-timeline {
+    padding: 8mm 0mm 0mm;
+  }
+
   .jumbo-header {
     min-height: fit-content;
     max-height: fit-content;
     background: var(--colour-primary);
     color: var(--colour-dark);
     justify-content: start;
-    padding-top: var(--grid-px);
+    padding-top: calc(8mm + var(--grid-px));
     padding-bottom: var(--grid-px);
     border-bottom-width: var(--grid-px);
   }
@@ -98,6 +102,7 @@
   .timeline-metadata {
     position: absolute;
     right: 0px;
+    top: 4px;
   }
 
   .timeline-item:nth-last-child(2) {
@@ -184,7 +189,7 @@
   }
 
   @page {
-    margin: 0;
+    margin: 0mm 0mm;
     size: A4;
   }
 }
