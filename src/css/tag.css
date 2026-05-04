@@ -46,11 +46,11 @@
   }
 }
 
-.tag.colour-bold {
+.tag.colour-secondary {
   color: var(--colour-secondary);
   background-color: var(--colour-secondary-lightest);
 }
 
-.tag.colour-bold::before {
+.tag.colour-secondary::before {
   border: 1px solid var(--colour-secondary);
 }

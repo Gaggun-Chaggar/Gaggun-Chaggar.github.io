@@ -18,7 +18,7 @@
   .content {
     max-width: unset;
     width: unset;
-    padding: 0mm 8mm;
+    padding: 0mm 16mm;
   }
 
   .experience-timeline {
@@ -31,7 +31,7 @@
     background: var(--colour-primary);
     color: var(--colour-dark);
     justify-content: start;
-    padding-top: calc(8mm + var(--grid-px));
+    padding-top: var(--grid-px);
     padding-bottom: var(--grid-px);
     border-bottom-width: var(--grid-px);
   }
@@ -74,6 +74,7 @@
   }
   .about-details > p {
     font-size: 10pt;
+    margin: 0;
   }
 
   .home-main > .bordered {
@@ -189,7 +190,7 @@
   }
 
   @page {
-    margin: 0mm 0mm;
+    margin: 16mm 0mm;
     size: A4;
   }
 }
