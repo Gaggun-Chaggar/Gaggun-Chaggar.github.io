@@ -18,7 +18,7 @@
   .content {
     max-width: unset;
     width: unset;
-    padding: 0mm 16mm;
+    padding: 0mm 8mm;
   }
 
   .experience-timeline {
@@ -34,6 +34,7 @@
     padding-top: var(--grid-px);
     padding-bottom: var(--grid-px);
     border-bottom-width: var(--grid-px);
+    margin-top: 8mm;
   }
 
   .about-content {
@@ -190,7 +191,7 @@
   }
 
   @page {
-    margin: 16mm 0mm;
+    margin: 0mm 0mm;
     size: A4;
   }
 }

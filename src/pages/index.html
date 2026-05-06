@@ -3,6 +3,7 @@ title: "Gaggun Chaggar"
 description: "Hey, I'm an experienced full stack software engineer and team leader. My aim is to make the people I work with feel pride in their work!"
 preload: >
   <link rel="preload" href="/images/me-512x512.webp" as="image" />
+  <link ref="preload" href="/js/print-util.js" as="script" />
 ---
 
 <header class="py-4 jumbo-header center" id="about">
@@ -18,7 +19,7 @@ preload: >
     </figure>
     <div>
       <h1 class="jumbo">Gaggun Chaggar</h1>
-      <div class="about-details">
+      <div id="about-details" class="about-details">
         <p class="no-print">
           <i
             role="img"
@@ -39,12 +40,9 @@ preload: >
           <i
             role="img"
             aria-label="Website Link"
-            class="fas fa-user-check mr-half fg-bold-light"
+            class="fas fa-globe mr-half fg-bold-light"
           ></i>
-          Recommendations:
-          <a
-            href="https://gaggun-chaggar.github.io#recommendations"
-            target="_blank"
+          <a href="https://gaggun-chaggar.github.io" target="_blank"
             >gaggun-chaggar.github.io</a
           >
         </p>
@@ -91,37 +89,26 @@ preload: >
                   <li class="tag colour-secondary">REST</li>
                   <li class="tag colour-secondary">gRPC</li>
                   <li class="tag colour-secondary">Terraform</li>
-                  <li class="tag colour-secondary">Google Cloud</li>
+                  <li class="tag colour-secondary">GCP</li>
                   <li class="tag colour-secondary">AWS</li>
                   <li class="tag colour-secondary">Docker</li>
                   <li class="tag colour-secondary">Prometheus</li>
                   <li class="tag colour-secondary">Kubernetes</li>
                   <li class="tag colour-secondary">GitLab CI</li>
                 </ul>
-                <p>
-                  <a href="https://www.icomera.com" target="_blank">Icomera </a>
-                  is a product-focused company that specialises in onboard
-                  hardware and software solutions for public transport. I am
-                  currently responsible for 6 complex products: a no-code
-                  website builder, an onboard entertainment website, a media
-                  CRM, a customer notification service, a bespoke CRM for a
-                  specific client and a real-time journey tracker.
-                </p>
                 <ul class="disc-list mb-1">
                   <li>
-                    I am hands-on and the top individual contributor in the
-                    company.
+                    I am responsible for 6 complex products: a no-code website
+                    builder, an onboard entertainment website, a media CRM, a
+                    customer notification service, a bespoke CRM for a specific
+                    client and a real-time journey tracker.
                   </li>
                   <li>
                     I set the company code standards for Go and TypeScript for
-                    all teams. I have created multiple libraries and frameworks
-                    to ensure a consistent development style across the company.
-                  </li>
-                  <li>
-                    I built a testing framework and supporting libraries for
-                    mocking used across the company, usage has resulted in major
-                    increases in test coverage (~60% to ~95%) and faster
-                    deployments to production for features.
+                    all teams. I built a testing framework and supporting
+                    libraries for mocking used across the company, usage has
+                    resulted in major increases in test coverage (~60% to ~95%)
+                    and faster deployments to production for features.
                   </li>
                   <li>
                     I introduced new standards for observability, availability
@@ -134,15 +121,10 @@ preload: >
                     technical architecture and UI/UX.
                   </li>
                   <li>
-                    I led my team to reduce lines of code in 2 inherited
-                    repositories by over 50% (~30,000 lines).
-                  </li>
-                  <li>
                     I manage a team of mid to senior full stack developers. I
-                    take a compassionate approach to management and help
-                    engineers find out how to be their most productive self. I
-                    helped double the output of two team members after taking
-                    over their line management.
+                    take a compassionate approach to management. I helped double
+                    the output of two team members after taking over their line
+                    management.
                   </li>
                   <li>
                     I taught the manual QA team TypeScript, Cypress and
@@ -150,20 +132,9 @@ preload: >
                     saving 3 days from end-2-end test cycles.
                   </li>
                   <li>
-                    I influenced multiple teams to push for more internal
-                    innovation of our products, later resulting in more
-                    successful sales bids and quicker client onboarding.
-                  </li>
-                  <li>
                     I introduced write-ups and deliverables for project-style
                     work, resulting in smoother projects, clearer scope and
                     better communication internally.
-                  </li>
-                  <li>
-                    I have introduced multiple cultural norms into the company,
-                    for example: encouraging communication between different
-                    levels of seniority; introducing demos and championing
-                    recognition of individual achievements.
                   </li>
                 </ul>
               </div>
@@ -194,30 +165,20 @@ preload: >
                   <li class="tag colour-secondary">Docker</li>
                   <li class="tag colour-secondary">GitHub Actions</li>
                 </ul>
-                <p>
-                  <a href="https://www.causalens.com/" target="_blank"
-                    >causaLens
-                  </a>
-                  is a product-focused company creating and delivering tools
-                  that help businesses make decisions using Causal AI. I joined
-                  as a Lead Engineer for
-                  <a
-                    href="https://causalai.causalens.com/resources/webinars/decisionos-the-first-operating-system-for-decision-making-powered-by-causal-ai/"
-                    target="_blank"
-                    >decisionOS </a
-                  >, a system to help data scientists create Causal AI focused
-                  applications using only Python.
-                </p>
                 <ul class="disc-list mb-1">
                   <li>
-                    My team and I cleared 5 months of objectives in 3 months. We
-                    were awarded time-off from the CTO for exceeding
-                    expectations.
+                    I was the Lead Engineer for
+                    <a
+                      href="https://causalai.causalens.com/resources/webinars/decisionos-the-first-operating-system-for-decision-making-powered-by-causal-ai/"
+                      target="_blank"
+                      >decisionOS </a
+                    >, a system to help data scientists create Causal AI focused
+                    applications with Python.
                   </li>
                   <li>
-                    My team and I cleared all bugs (over 30) raised for
-                    DecisionOS prior to my joining and ended the quarter with 0
-                    bugs raised.
+                    My team and I cleared 5 months of objectives in 3 months and
+                    all pre-existing bugs in DecisionOS. We were awarded
+                    time-off from the CTO for exceeding expectations.
                   </li>
                   <li>
                     I created a new user interface for Causal Graphs which is
@@ -230,11 +191,6 @@ preload: >
                     I introduced new process workflows and automations for
                     engineering and R&D. Additional planning and upfront design
                     led to 25% increase in sprint velocity.
-                  </li>
-                  <li>
-                    I defined seniority, grades and a skills matrix for software
-                    engineers, giving clear direction for engineers across the
-                    company.
                   </li>
                 </ul>
               </div>
@@ -268,8 +224,7 @@ preload: >
                   <li class="tag colour-secondary">gRPC</li>
                 </ul>
                 <p>
-                  I previously worked at GoMedia as a Lead Engineer responsible
-                  for
+                  I was the Lead Engineer responsible for
                   <a
                     href="https://www.icomera.com/solutions/goview-onboard-entertainment"
                     target="_blank"
@@ -294,7 +249,7 @@ preload: >
                 </h3>
                 <h4 class="timeline-subtitle">
                   <i role="presentation" class="fa fa-briefcase mr-half"></i>
-                  Symphony Ventures Ltd. [Scale-up, B2B]
+                  Symphony Ventures Ltd. [Scale-up, B2B, Consultancy]
                 </h4>
               </div>
               <div class="timeline-body">
@@ -311,13 +266,11 @@ preload: >
                   <li class="tag colour-secondary">GraphQL</li>
                 </ul>
                 <p>
-                  Symphony Ventures Ltd. was a consultancy which implemented
-                  business process automations. At Symphony, I was given the
-                  opportunity to learn to code and build multiple complex
-                  products as a solo developer. This was in addition to
-                  consultancy and training work, which gave me a great
-                  understanding of wider business activities and scaling teams
-                  rapidly.
+                  At Symphony, I was given the opportunity to learn to code and
+                  build multiple complex products as a solo developer. This was
+                  in addition to consultancy and training work, which gave me a
+                  great understanding of wider business activities and scaling
+                  teams rapidly.
                 </p>
               </div>
             </li>
@@ -340,15 +293,8 @@ preload: >
                   University of Warwick
                 </h4>
               </div>
-              <div class="timeline-body">
-                <p>
-                  During my studies at Warwick, I focused primarily on Algebraic
-                  topics, Algorithms and Formal Languages. I graduated in the
-                  top 3 of my year.
-                </p>
-              </div>
             </li>
-            <li class="timeline-item">
+            <li class="timeline-item no-print">
               <div class="timeline-header">
                 <div class="timeline-metadata">2012 – 2014</div>
                 <h3 class="timeline-title">
@@ -490,3 +436,4 @@ preload: >
     </div>
   </div>
 </main>
+<script src="/js/print-util.js"></script>
